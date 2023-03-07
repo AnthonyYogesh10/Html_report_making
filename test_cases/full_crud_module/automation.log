@@ -1,0 +1,24 @@
+06-Mar-23 20:02:53 LoginPage INFO:Assign robyn.hills@sematree.com into username
+06-Mar-23 20:02:53 LoginPage INFO:Assign *Welcome&Tech2022 into password
+06-Mar-23 20:02:54 LoginPage INFO:Click on login button
+06-Mar-23 20:03:05 HomePage INFO:Click on menubar
+06-Mar-23 20:03:08 HomePage INFO:Click on side_nav
+06-Mar-23 20:03:12 HomePage INFO:Click on administration
+06-Mar-23 20:03:15 HomePage INFO:Click on category
+06-Mar-23 20:03:22 HomePage INFO:Click on add button
+06-Mar-23 20:03:25 Add_model INFO:Assign new sample2 into name
+06-Mar-23 20:03:26 Add_model INFO:Assign added for testing into description
+06-Mar-23 20:03:26 Add_model INFO:Assign 8838yo203 into bussiness code
+06-Mar-23 20:03:29 Add_model INFO:Click on submit button
+06-Mar-23 20:03:34 Add_model INFO:testcase add passed
+06-Mar-23 20:03:38 HomePage INFO:Assign new sample2 into search input
+06-Mar-23 20:03:41 HomePage INFO:Click on search button
+06-Mar-23 20:03:49 HomePage INFO:Click on modify
+06-Mar-23 20:03:54 Modify_page INFO:Assign sampleTracker_modify into name
+06-Mar-23 20:03:54 Modify_page INFO:Assign Modified data into description
+06-Mar-23 20:03:54 Modify_page INFO:Assign 810Ybecse into bussiness code
+06-Mar-23 20:03:57 Modify_page INFO:Click on save button
+06-Mar-23 20:04:00 Modify_page INFO:testcase modify passed
+06-Mar-23 20:04:05 HomePage INFO:Click on delete button
+06-Mar-23 20:04:08 Delete_page INFO:Click on confirm button
+06-Mar-23 20:04:13 Delete_page INFO:testcase delete passed
