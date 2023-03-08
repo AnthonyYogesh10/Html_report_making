@@ -60,7 +60,6 @@ class Modify_page():
     def modify_toaster(self):
         toaster = self.get_modify_toaster_field()
         toaster_text = toaster.text
-        print(toaster_text)
         if toaster_text == "Success":
             self.log.info("testcase modify passed")
 

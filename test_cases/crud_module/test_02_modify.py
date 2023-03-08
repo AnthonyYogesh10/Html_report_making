@@ -14,14 +14,10 @@ class Test_Modify():
         self.hp = HomePage(self.driver)
         self.modify_modal = Modify_page(self.driver)
 
-    def test_login(self):
+    def test_modify(self):
         self.lp.login("robyn.hills@sematree.com", "*Welcome&Tech2022")
-
-    def test_navigate(self):
         self.hp.click_menu_bar()
         self.hp.navigate_to("Administration", "Categories", "Sample Types")
-
-    def test_modify(self):
         self.hp.click_modify_btn()
         self.modify_modal.modify("sampleTracker_modify", "Modified data", "810Ybecse")
         self.modify_modal.modify_toaster()

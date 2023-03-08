@@ -3,7 +3,7 @@ body {
   font-size: 12px;
   /* do not increase min-width as some may use split screens */
   min-width: 800px;
-  color: black;
+  color: #999;
 }
 
 h1 {
@@ -21,7 +21,7 @@ p {
 }
 
 a {
-  color: black;
+  color: #999;
 }
 
 table {
@@ -78,7 +78,7 @@ span.xpassed,
  *------------------*/
 #results-table {
   border: 1px solid #e6e6e6;
-  color: black;
+  color: #999;
   font-size: 12px;
   width: 100%;
 }
@@ -178,11 +178,11 @@ div.video video {
 }
 .asc.active .sort-icon {
   /*finish triangle*/
-  border-bottom: 8px solid black;
+  border-bottom: 8px solid #999;
 }
 .desc.active .sort-icon {
   /*finish triangle*/
-  border-top: 8px solid black;
+  border-top: 8px solid #999;
 }
 
 /******************************

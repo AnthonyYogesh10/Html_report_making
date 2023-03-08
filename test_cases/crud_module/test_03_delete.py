@@ -12,14 +12,10 @@ class Test_Delete():
     def class_setup(self):
         self.delete_modal = Delete_page(self.driver)
 
-    def test_login(self):
+    def test_delete(self):
         self.lp.login("robyn.hills@sematree.com", "*Welcome&Tech2022")
-
-    def test_navigate(self):
         self.hp.click_menu_bar()
         self.hp.navigate_to("Administration", "Categories", "Sample Types")
-
-    def test_delete(self):
         self.hp.click_delete_btn()
         self.dele_modal.click_delete_confirm()
         self.dele_modal.delete_toaster()

@@ -6,7 +6,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from utilities.utilities import utils
 
 
-
 class HomePage():
     log = utils().custom_logger(mode='a')
 
@@ -24,6 +23,9 @@ class HomePage():
     delete_btn_field = "//button[normalize-space()='Delete']"
     search_input_field = "//input[@id='quick-search']"
     search_button_field = "//i[@class='fa fa-search']"
+    show_btn_field = "//td[@id='list-table-left-column-top']//table//tr/td/div/button"
+    page_numbers_per_page_field = "//body/div/div[@class ='cdk-overlay-connected-position-bounding-box']/div/div/ul/li"
+    searched_data_field = "//div[@id='mid-list']/a"
 
     # Loactors to Use (It is used to avoid store variables
     #                 eg: name = xpath
@@ -52,22 +54,27 @@ class HomePage():
         return self.wait.until(
             EC.visibility_of_element_located((By.XPATH, self.modify_btn_field))
         )
-        # return self.driver.find_element(By.XPATH, self.modify_btn_field)
-
     def get_delete_btn_field(self):
         return self.wait.until(
             EC.visibility_of_element_located((By.XPATH, self.delete_btn_field))
         )
-        # return self.driver.find_element(By.XPATH, self.delete_btn_field)
 
     def get_search_input_field(self):
         return self.wait.until(
             EC.visibility_of_element_located((By.XPATH, self.search_input_field))
         )
-        # return self.driver.find_element(By.XPATH, self.search_input_field)
 
     def get_search_button_field(self):
         return self.driver.find_element(By.XPATH, self.search_button_field)
+
+    def get_show_button_field(self):
+        return self.driver.find_element(By.XPATH, self.show_btn_field)
+
+    def get_no_of_data_per_page_field(self):
+        return self.driver.find_elements(By.XPATH, self.page_numbers_per_page_field)
+
+    def get_searched_data_field(self):
+        return self.driver.find_elements(By.XPATH, self.searched_data_field)
 
     def click_menu_bar(self):
         self.get_menubar_field().click()
@@ -120,6 +127,25 @@ class HomePage():
         self.log.info("Click on search button")
         time.sleep(3)
 
+    def click_show_button(self):
+        self.get_show_button_field().click()
+        time.sleep(5)
+
+    def select_page_number(self, data_per_page):
+        page_numbers = self.get_no_of_data_per_page_field()
+        for options in page_numbers:
+            if options.text == data_per_page:
+                options.click()
+                self.log.info(f"Click on {data_per_page}")
+
+    def select_list_of_searched_data(self):
+        list_of_data = self.get_searched_data_field()
+        length = len(list_of_data)
+        self.log.info(f'Total item found {length}')
+        print(f'Total item found {length}')
+        for data in list_of_data:
+            print(f'\n{data.text.strip()}')
+
     def navigate_to(self, navigate_to, administration, category):
         self.select_side_nav(navigate_to)
         time.sleep(3)
@@ -132,7 +158,7 @@ class HomePage():
         new_url = self.driver.current_url
         return new_url
 
-    def data_of_sample_type(self):
-        datas = self.driver.find_elements(By.XPATH, "//div[@id='mid-list']/a")
-        lenth_of_data = len(datas)
-        # for data in datas:
+    # def data_of_sample_type(self):
+    #     datas = self.driver.find_elements(By.XPATH, "//div[@id='mid-list']/a")
+    #     lenth_of_data = len(datas)
+    #     # for data in datas:

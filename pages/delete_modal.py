@@ -28,7 +28,6 @@ class Delete_page():
     def delete_toaster(self):
         toaster = self.get_delete_toaster_succ_field()
         toaste_text = toaster.text
-        print(toaste_text)
         if toaste_text == "Success":
             self.log.info("testcase delete passed")
         else:
