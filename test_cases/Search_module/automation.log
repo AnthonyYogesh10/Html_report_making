@@ -1,11 +1,9 @@
-08-Mar-23 16:10:36 LoginPage INFO:Assign robyn.hills@sematree.com into username
-08-Mar-23 16:10:36 LoginPage INFO:Assign *Welcome&Tech2022 into password
-08-Mar-23 16:10:38 LoginPage INFO:Click on login button
-08-Mar-23 16:10:45 HomePage INFO:Click on menubar
-08-Mar-23 16:10:48 HomePage INFO:Click on side_nav
-08-Mar-23 16:10:51 HomePage INFO:Click on administration
-08-Mar-23 16:10:54 HomePage INFO:Click on category
-08-Mar-23 16:10:58 HomePage INFO:Assign test into search input
-08-Mar-23 16:11:01 HomePage INFO:Click on search button
-08-Mar-23 16:11:09 HomePage INFO:Click on 10 per Page
-08-Mar-23 16:11:14 HomePage INFO:Total item found 3
+09-Mar-23 19:49:58 LoginPage INFO:Assign robyn.hills@sematree.com into username
+09-Mar-23 19:49:58 LoginPage INFO:Assign *Welcome&Tech2022 into password
+09-Mar-23 19:49:59 LoginPage INFO:Click on login button
+09-Mar-23 19:50:06 HomePage INFO:Click on search button
+09-Mar-23 19:50:15 HomePage INFO:Click on 25 per Page
+09-Mar-23 19:50:25 HomePage INFO:Click on next button
+09-Mar-23 19:50:36 HomePage INFO:Click on next button
+09-Mar-23 19:50:47 HomePage INFO:Total Items Found: 64
+09-Mar-23 19:50:47 HomePage INFO:Total Pages: 3

@@ -1,5 +1,6 @@
 import time
 
+from selenium.common import ElementClickInterceptedException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -24,8 +25,11 @@ class HomePage():
     search_input_field = "//input[@id='quick-search']"
     search_button_field = "//i[@class='fa fa-search']"
     show_btn_field = "//td[@id='list-table-left-column-top']//table//tr/td/div/button"
-    page_numbers_per_page_field = "//body/div/div[@class ='cdk-overlay-connected-position-bounding-box']/div/div/ul/li"
-    searched_data_field = "//div[@id='mid-list']/a"
+    per_page_list_field = "//body/div/div[@class ='cdk-overlay-connected-position-bounding-box']/div/div/ul/li"
+    data_box_field = "//div[@id='mid-list']"
+    data_list_field = "//div[@id='mid-list']/a"
+    page_numbers_field = "//ul[@class='pagination pagination-sm justify-content-center']/li"
+    next_page_field = "//a[normalize-space()='>']"
 
     # Loactors to Use (It is used to avoid store variables
     #                 eg: name = xpath
@@ -54,6 +58,7 @@ class HomePage():
         return self.wait.until(
             EC.visibility_of_element_located((By.XPATH, self.modify_btn_field))
         )
+
     def get_delete_btn_field(self):
         return self.wait.until(
             EC.visibility_of_element_located((By.XPATH, self.delete_btn_field))
@@ -70,11 +75,20 @@ class HomePage():
     def get_show_button_field(self):
         return self.driver.find_element(By.XPATH, self.show_btn_field)
 
-    def get_no_of_data_per_page_field(self):
-        return self.driver.find_elements(By.XPATH, self.page_numbers_per_page_field)
+    def get_per_page_list_field(self):
+        return self.driver.find_elements(By.XPATH, self.per_page_list_field)
 
-    def get_searched_data_field(self):
-        return self.driver.find_elements(By.XPATH, self.searched_data_field)
+    def get_data_list_field(self):
+        return self.driver.find_elements(By.XPATH, self.data_list_field)
+
+    def get_data_box_field(self):
+        return self.driver.find_element(By.XPATH, self.data_box_field)
+
+    def get_page_numbers_field(self):
+        return self.driver.find_elements(By.XPATH, self.page_numbers_field)
+
+    def get_next_field(self):
+        return self.driver.find_element(By.XPATH, self.next_page_field)
 
     def click_menu_bar(self):
         self.get_menubar_field().click()
@@ -131,20 +145,59 @@ class HomePage():
         self.get_show_button_field().click()
         time.sleep(5)
 
-    def select_page_number(self, data_per_page):
-        page_numbers = self.get_no_of_data_per_page_field()
+    def select_per_page_list(self, data_per_page):
+        page_numbers = self.get_per_page_list_field()
         for options in page_numbers:
             if options.text == data_per_page:
                 options.click()
                 self.log.info(f"Click on {data_per_page}")
+        time.sleep(5)
 
-    def select_list_of_searched_data(self):
-        list_of_data = self.get_searched_data_field()
+    def data_list(self):
+        list_of_data = self.get_data_list_field()
         length = len(list_of_data)
         self.log.info(f'Total item found {length}')
-        print(f'Total item found {length}')
         for data in list_of_data:
             print(f'\n{data.text.strip()}')
+
+    def scroll_data_box(self, scroll_multiplier):
+        data_box = self.get_data_box_field()
+        current_scroll_position = 0
+        target_scroll_position = 1200 * scroll_multiplier
+        scroll_increment = 100
+        scroll_delay = 0.05  # in seconds
+        total_scroll_time = scroll_multiplier  # in seconds
+        start_time = time.time()
+
+        while time.time() - start_time < total_scroll_time:
+            self.driver.execute_script(f"arguments[0].scrollTop = {current_scroll_position}", data_box)
+            current_scroll_position += scroll_increment
+            time.sleep(scroll_delay)
+
+            if current_scroll_position >= target_scroll_position:
+                break
+        time.sleep(3)
+
+    def scroll_n_click_next(self):
+        page_numbers = self.get_page_numbers_field()
+        length_of_page_numbers = len(page_numbers) - 3
+        length_of_data_list = []
+        for i in range(0, length_of_page_numbers):
+            data_list = len(self.get_data_list_field())
+            length_of_data_list.insert(1, data_list)
+            if i < length_of_page_numbers:
+                self.scroll_data_box(3)
+                try:
+                    self.get_next_field().click()
+                    self.log.info("Click on next button")
+                    time.sleep(5)
+                except ElementClickInterceptedException:
+                    print('')
+
+        print(f'Total Items Found: {sum(length_of_data_list)}')
+        self.log.info(f'Total Items Found: {sum(length_of_data_list)}')
+        print(f'\n Total Pages: {length_of_page_numbers}')
+        self.log.info(f'Total Pages: {length_of_page_numbers}')
 
     def navigate_to(self, navigate_to, administration, category):
         self.select_side_nav(navigate_to)
@@ -157,8 +210,3 @@ class HomePage():
     def fetch_url(self):
         new_url = self.driver.current_url
         return new_url
-
-    # def data_of_sample_type(self):
-    #     datas = self.driver.find_elements(By.XPATH, "//div[@id='mid-list']/a")
-    #     lenth_of_data = len(datas)
-    #     # for data in datas:
