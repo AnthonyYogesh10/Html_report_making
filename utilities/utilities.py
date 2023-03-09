@@ -1,8 +1,10 @@
 import inspect
 import logging
 
+
 class utils():
-    def custom_logger(self,mode):
+
+    def custom_logger(self, mode):
         # set class or method name from where it is called
         logger_name = inspect.stack()[1][3]
         # create logger
@@ -17,10 +19,6 @@ class utils():
         # add console handller to logger
         logger.addHandler(fh)
         return logger
-
-
-
-
 
 # utlities are used to set common things which not related with driver
 # base module are used to set common things which are related with driver
