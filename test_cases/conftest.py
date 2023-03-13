@@ -55,14 +55,6 @@ def pytest_configure(config):
     }
 
 
-# def pytest_html_head():
-#     return [
-#         html.script(
-#             src="https://cdnjs.cloudflare.com/ajax/libs/sortable/0.8.0/js/sortable.min.js",
-#             type="text/javascript",
-#         ),
-#     ]
-
 # Changing table header pytest-html
 def pytest_html_results_table_header(cells):
     del cells[:]

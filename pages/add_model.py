@@ -1,10 +1,13 @@
 import time
 
 from selenium.webdriver.common.by import By
+
 from utilities.utilities import utils
+
 
 class Add_model():
     log = utils().custom_logger(mode='a')
+
     def __init__(self, driver):
         self.driver = driver
 
@@ -70,6 +73,7 @@ class Add_model():
             self.log.info("testcase add passed")
         else:
             self.log.info("testcase add failed")
+
     time.sleep(6)
 
     def add(self, name, description, bussiness_code):
@@ -80,6 +84,3 @@ class Add_model():
         time.sleep(3)
         self.click_submit_btn()
         time.sleep(5)
-
-
-

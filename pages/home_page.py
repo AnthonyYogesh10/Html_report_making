@@ -4,6 +4,7 @@ from selenium.common import ElementClickInterceptedException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+
 from utilities.utilities import utils
 
 
@@ -160,24 +161,6 @@ class HomePage():
         for data in list_of_data:
             print(f'\n{data.text.strip()}')
 
-    def scroll_data_box(self, scroll_multiplier):
-        data_box = self.get_data_box_field()
-        current_scroll_position = 0
-        target_scroll_position = 1200 * scroll_multiplier
-        scroll_increment = 100
-        scroll_delay = 0.05  # in seconds
-        total_scroll_time = scroll_multiplier  # in seconds
-        start_time = time.time()
-
-        while time.time() - start_time < total_scroll_time:
-            self.driver.execute_script(f"arguments[0].scrollTop = {current_scroll_position}", data_box)
-            current_scroll_position += scroll_increment
-            time.sleep(scroll_delay)
-
-            if current_scroll_position >= target_scroll_position:
-                break
-        time.sleep(3)
-
     def navigate_to(self, navigate_to, administration, category):
         self.select_side_nav(navigate_to)
         time.sleep(3)
@@ -185,7 +168,3 @@ class HomePage():
         time.sleep(3)
         self.select_under_categories(category)
         time.sleep(3)
-
-    def fetch_url(self):
-        new_url = self.driver.current_url
-        return new_url

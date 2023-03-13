@@ -253,7 +253,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>Truetesta Sample Tracker Report</h1>
-    <p>Report generated on 13-Mar-2023 at 18:50:32 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
+    <p>Report generated on 13-Mar-2023 at 18:42:55 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -272,8 +272,8 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Python version</td>
         <td>3.10.6</td></tr></table>
     <h2>Summary</h2>
-    <p>1 tests ran in 64.96 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">1 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>6 tests ran in 115.37 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">6 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -293,27 +293,114 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
       <tbody class="passed results-table-row">
         <tr>
           <td>1</td>
-          <td class="col-time">2023-03-13 18:50:32</td>
-          <td>Test_Search</td>
-          <td>test_search</td>
+          <td class="col-time">2023-03-13 18:42:55</td>
+          <td>Test_AllCrud</td>
+          <td>test_login</td>
           <td class="col-result">Passed</td>
-          <td class="col-time">60.66s</td>
+          <td class="col-time">20.46s</td>
           <td><a href="https://keycloak-gbs-dev.trutesta.io/auth/realms/Intertek/protocol/openid-connect/auth?client_id=trutesta&amp;redirect_uri=https%3A%2F%2Fintertek-dev.trutesta.io%2Ftrusamples.mdb5%2F&amp;state=eebe6991-1ec6-4f06-8534-81d5a6fa6355&amp;response_mode=fragment&amp;response_type=code&amp;scope=openid&amp;nonce=10dcc108-fc2c-4ef7-8ae7-68a89c803e99" target="_blank">URL</a></td>
           <td>Chrome</td>
           <td>110.0.5481.100</td>
           <td>1050 * 748</td></tr>
         <tr>
           <td class="extra" colspan="10">
-            <div><div><img src="screenshots/Test_Search/1678713630065.png" alt="screenshot" style="width:300px;height:200px" onclick="window.open(this.src)" align="right"/></div></div>
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>
-Total Items Found: 65
-
- Total Pages: 2
-<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     LoginPage:login_page.py:29 Assign robyn.hills@sematree.com into username
+            <div><div><img src="screenshots/Test_AllCrud/1678713100418.png" alt="screenshot" style="width:300px;height:200px" onclick="window.open(this.src)" align="right"/></div></div>
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     LoginPage:login_page.py:29 Assign robyn.hills@sematree.com into username
 INFO     LoginPage:login_page.py:37 Assign *Welcome&amp;Tech2022 into password
-INFO     LoginPage:login_page.py:42 Click on login button
-INFO     HomePage:home_page.py:142 Click on search button
-INFO     HomePage:home_page.py:154 Click on 50 per Page
-INFO     BaseDriver:base_driver.py:51 Click on next button
-INFO     BaseDriver:base_driver.py:57 Total Items Found: 65
-INFO     BaseDriver:base_driver.py:59 Total Pages: 2<br/></div></td></tr></tbody></table></body></html>
+INFO     LoginPage:login_page.py:42 Click on login button<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td>2</td>
+          <td class="col-time">2023-03-13 18:42:55</td>
+          <td>Test_AllCrud</td>
+          <td>test_navigate</td>
+          <td class="col-result">Passed</td>
+          <td class="col-time">12.95s</td>
+          <td><a href="https://keycloak-gbs-dev.trutesta.io/auth/realms/Intertek/protocol/openid-connect/auth?client_id=trutesta&amp;redirect_uri=https%3A%2F%2Fintertek-dev.trutesta.io%2Ftrusamples.mdb5%2F&amp;state=eebe6991-1ec6-4f06-8534-81d5a6fa6355&amp;response_mode=fragment&amp;response_type=code&amp;scope=openid&amp;nonce=10dcc108-fc2c-4ef7-8ae7-68a89c803e99" target="_blank">URL</a></td>
+          <td>Chrome</td>
+          <td>110.0.5481.100</td>
+          <td>1050 * 748</td></tr>
+        <tr>
+          <td class="extra" colspan="10">
+            <div><div><img src="screenshots/Test_AllCrud/1678713117575.png" alt="screenshot" style="width:300px;height:200px" onclick="window.open(this.src)" align="right"/></div></div>
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     HomePage:home_page.py:96 Click on menubar
+INFO     HomePage:home_page.py:104 Click on side_nav
+INFO     HomePage:home_page.py:111 Click on administration
+INFO     HomePage:home_page.py:118 Click on category<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td>3</td>
+          <td class="col-time">2023-03-13 18:42:55</td>
+          <td>Test_AllCrud</td>
+          <td>test_add</td>
+          <td class="col-result">Passed</td>
+          <td class="col-time">11.89s</td>
+          <td><a href="https://keycloak-gbs-dev.trutesta.io/auth/realms/Intertek/protocol/openid-connect/auth?client_id=trutesta&amp;redirect_uri=https%3A%2F%2Fintertek-dev.trutesta.io%2Ftrusamples.mdb5%2F&amp;state=eebe6991-1ec6-4f06-8534-81d5a6fa6355&amp;response_mode=fragment&amp;response_type=code&amp;scope=openid&amp;nonce=10dcc108-fc2c-4ef7-8ae7-68a89c803e99" target="_blank">URL</a></td>
+          <td>Chrome</td>
+          <td>110.0.5481.100</td>
+          <td>1050 * 748</td></tr>
+        <tr>
+          <td class="extra" colspan="10">
+            <div><div><img src="screenshots/Test_AllCrud/1678713133642.png" alt="screenshot" style="width:300px;height:200px" onclick="window.open(this.src)" align="right"/></div></div>
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     HomePage:home_page.py:122 Click on add button
+INFO     Add_model:add_model.py:46 Assign new sample2 into name
+INFO     Add_model:add_model.py:51 Assign added for testing into description
+INFO     Add_model:add_model.py:56 Assign 8838yo203 into bussiness code
+INFO     Add_model:add_model.py:64 Click on submit button
+INFO     Add_model:add_model.py:73 testcase add passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td>4</td>
+          <td class="col-time">2023-03-13 18:42:55</td>
+          <td>Test_AllCrud</td>
+          <td>test_search</td>
+          <td class="col-result">Passed</td>
+          <td class="col-time">6.34s</td>
+          <td><a href="https://keycloak-gbs-dev.trutesta.io/auth/realms/Intertek/protocol/openid-connect/auth?client_id=trutesta&amp;redirect_uri=https%3A%2F%2Fintertek-dev.trutesta.io%2Ftrusamples.mdb5%2F&amp;state=eebe6991-1ec6-4f06-8534-81d5a6fa6355&amp;response_mode=fragment&amp;response_type=code&amp;scope=openid&amp;nonce=10dcc108-fc2c-4ef7-8ae7-68a89c803e99" target="_blank">URL</a></td>
+          <td>Chrome</td>
+          <td>110.0.5481.100</td>
+          <td>1050 * 748</td></tr>
+        <tr>
+          <td class="extra" colspan="10">
+            <div><div><img src="screenshots/Test_AllCrud/1678713144162.png" alt="screenshot" style="width:300px;height:200px" onclick="window.open(this.src)" align="right"/></div></div>
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     HomePage:home_page.py:137 Assign new sample2 into search input
+INFO     HomePage:home_page.py:142 Click on search button<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td>5</td>
+          <td class="col-time">2023-03-13 18:42:55</td>
+          <td>Test_AllCrud</td>
+          <td>test_modify</td>
+          <td class="col-result">Passed</td>
+          <td class="col-time">12.02s</td>
+          <td><a href="https://keycloak-gbs-dev.trutesta.io/auth/realms/Intertek/protocol/openid-connect/auth?client_id=trutesta&amp;redirect_uri=https%3A%2F%2Fintertek-dev.trutesta.io%2Ftrusamples.mdb5%2F&amp;state=eebe6991-1ec6-4f06-8534-81d5a6fa6355&amp;response_mode=fragment&amp;response_type=code&amp;scope=openid&amp;nonce=10dcc108-fc2c-4ef7-8ae7-68a89c803e99" target="_blank">URL</a></td>
+          <td>Chrome</td>
+          <td>110.0.5481.100</td>
+          <td>1050 * 748</td></tr>
+        <tr>
+          <td class="extra" colspan="10">
+            <div><div><img src="screenshots/Test_AllCrud/1678713160368.png" alt="screenshot" style="width:300px;height:200px" onclick="window.open(this.src)" align="right"/></div></div>
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     HomePage:home_page.py:127 Click on modify
+INFO     Modify_page:modify_modal.py:46 Assign sampleTracker_modify into name
+INFO     Modify_page:modify_modal.py:51 Assign Modified data into description
+INFO     Modify_page:modify_modal.py:56 Assign 810Ybecse into bussiness code
+INFO     Modify_page:modify_modal.py:64 Click on save button
+INFO     Modify_page:modify_modal.py:74 testcase modify passed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td>6</td>
+          <td class="col-time">2023-03-13 18:42:55</td>
+          <td>Test_AllCrud</td>
+          <td>test_delete</td>
+          <td class="col-result">Passed</td>
+          <td class="col-time">8.44s</td>
+          <td><a href="https://keycloak-gbs-dev.trutesta.io/auth/realms/Intertek/protocol/openid-connect/auth?client_id=trutesta&amp;redirect_uri=https%3A%2F%2Fintertek-dev.trutesta.io%2Ftrusamples.mdb5%2F&amp;state=eebe6991-1ec6-4f06-8534-81d5a6fa6355&amp;response_mode=fragment&amp;response_type=code&amp;scope=openid&amp;nonce=10dcc108-fc2c-4ef7-8ae7-68a89c803e99" target="_blank">URL</a></td>
+          <td>Chrome</td>
+          <td>110.0.5481.100</td>
+          <td>1050 * 748</td></tr>
+        <tr>
+          <td class="extra" colspan="10">
+            <div><div><img src="screenshots/Test_AllCrud/1678713172860.png" alt="screenshot" style="width:300px;height:200px" onclick="window.open(this.src)" align="right"/></div></div>
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>INFO     HomePage:home_page.py:132 Click on delete button
+INFO     Delete_page:delete_modal.py:29 Click on confirm button
+INFO     Delete_page:delete_modal.py:40 testcase delete passed<br/></div></td></tr></tbody></table></body></html>

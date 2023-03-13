@@ -1,24 +1,24 @@
-07-Mar-23 15:22:45 LoginPage INFO:Assign robyn.hills@sematree.com into username
-07-Mar-23 15:22:45 LoginPage INFO:Assign *Welcome&Tech2022 into password
-07-Mar-23 15:22:46 LoginPage INFO:Click on login button
-07-Mar-23 15:22:58 HomePage INFO:Click on menubar
-07-Mar-23 15:23:01 HomePage INFO:Click on side_nav
-07-Mar-23 15:23:04 HomePage INFO:Click on administration
-07-Mar-23 15:23:07 HomePage INFO:Click on category
-07-Mar-23 15:23:15 HomePage INFO:Click on add button
-07-Mar-23 15:23:18 Add_model INFO:Assign new sample2 into name
-07-Mar-23 15:23:18 Add_model INFO:Assign added for testing into description
-07-Mar-23 15:23:18 Add_model INFO:Assign 8838yo203 into bussiness code
-07-Mar-23 15:23:21 Add_model INFO:Click on submit button
-07-Mar-23 15:23:26 Add_model INFO:testcase add passed
-07-Mar-23 15:23:31 HomePage INFO:Assign new sample2 into search input
-07-Mar-23 15:23:34 HomePage INFO:Click on search button
-07-Mar-23 15:23:41 HomePage INFO:Click on modify
-07-Mar-23 15:23:47 Modify_page INFO:Assign sampleTracker_modify into name
-07-Mar-23 15:23:47 Modify_page INFO:Assign Modified data into description
-07-Mar-23 15:23:47 Modify_page INFO:Assign 810Ybecse into bussiness code
-07-Mar-23 15:23:50 Modify_page INFO:Click on save button
-07-Mar-23 15:23:53 Modify_page INFO:testcase modify passed
-07-Mar-23 15:23:57 HomePage INFO:Click on delete button
-07-Mar-23 15:24:00 Delete_page INFO:Click on confirm button
-07-Mar-23 15:24:06 Delete_page INFO:testcase delete passed
+13-Mar-23 18:41:29 LoginPage INFO:Assign robyn.hills@sematree.com into username
+13-Mar-23 18:41:30 LoginPage INFO:Assign *Welcome&Tech2022 into password
+13-Mar-23 18:41:31 LoginPage INFO:Click on login button
+13-Mar-23 18:41:42 HomePage INFO:Click on menubar
+13-Mar-23 18:41:46 HomePage INFO:Click on side_nav
+13-Mar-23 18:41:49 HomePage INFO:Click on administration
+13-Mar-23 18:41:52 HomePage INFO:Click on category
+13-Mar-23 18:41:59 HomePage INFO:Click on add button
+13-Mar-23 18:42:03 Add_model INFO:Assign new sample2 into name
+13-Mar-23 18:42:03 Add_model INFO:Assign added for testing into description
+13-Mar-23 18:42:03 Add_model INFO:Assign 8838yo203 into bussiness code
+13-Mar-23 18:42:06 Add_model INFO:Click on submit button
+13-Mar-23 18:42:11 Add_model INFO:testcase add passed
+13-Mar-23 18:42:16 HomePage INFO:Assign new sample2 into search input
+13-Mar-23 18:42:19 HomePage INFO:Click on search button
+13-Mar-23 18:42:26 HomePage INFO:Click on modify
+13-Mar-23 18:42:31 Modify_page INFO:Assign sampleTracker_modify into name
+13-Mar-23 18:42:31 Modify_page INFO:Assign Modified data into description
+13-Mar-23 18:42:32 Modify_page INFO:Assign 810Ybecse into bussiness code
+13-Mar-23 18:42:35 Modify_page INFO:Click on save button
+13-Mar-23 18:42:38 Modify_page INFO:testcase modify passed
+13-Mar-23 18:42:42 HomePage INFO:Click on delete button
+13-Mar-23 18:42:45 Delete_page INFO:Click on confirm button
+13-Mar-23 18:42:50 Delete_page INFO:testcase delete passed

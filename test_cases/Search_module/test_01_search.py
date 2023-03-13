@@ -9,7 +9,8 @@ from pages.login_page import LoginPage
 
 
 @pytest.mark.usefixtures("setup")
-class Test_Search():
+class Test_Search:
+
     @pytest.fixture(autouse=True)
     def class_setup(self):
         self.lp = LoginPage(self.driver)
@@ -23,8 +24,6 @@ class Test_Search():
         # self.hp.enter_search_input('test')
         self.hp.click_search_button()
         self.hp.click_show_button()
-        self.hp.select_per_page_list('25 per Page')
-        self.base.scroll_n_click_next()
-        time.sleep(3)
-        # self.hp.data_list()
-        # time.sleep(5)
+        self.hp.select_per_page_list("50 per Page")
+        self.base.scroll_n_click_next("50 per Page")
+        time.sleep(5)
