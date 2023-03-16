@@ -16,8 +16,10 @@ How to Run this code::
  
        1) First select the directory of TestCase eg : /Desktop/automation/Html_report_making/test_cases/full_crud_module
        
-       2) After selecting testCase copy this code ---> **pytest --html=../../reports/All_crud_report.html --css=../../utilities/style.css 
-          --log-format='%(asctime)s - %(levelname)s - %(message)s'**
+       2) To run this code copy below code:
+     
+           pytest --html=../../reports/All_crud_report.html --css=../../utilities/style.css 
+           --log-format='%(asctime)s - %(levelname)s - %(message)s'
 
        
        3) --html=../../reports/All_crud_report.html---> name of the report,
