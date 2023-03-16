@@ -1,3 +1,4 @@
+import logging
 import os
 import time
 from datetime import datetime
@@ -91,16 +92,16 @@ def pytest_runtest_makereport(item):
     if report.when == "call":
         extra = getattr(report, "extra", [])
         xfail = hasattr(report, "wasxfail")
-        if (report.failed and not xfail) or report.passed:
             # only add additional html on log area
+        if (report.failed and not xfail) or report.passed:
             report_directory = os.path.dirname(item.config.option.htmlpath)
             screenshot_folder = 'screenshots'
             test_name = report.test_name
             path_test_name_folder = os.path.join(report_directory, screenshot_folder, test_name)
             time.sleep(2)
-            os.makedirs(path_test_name_folder, exist_ok=True)
+            os.makedirs(path_test_name_folder,exist_ok=True)
             test_name_folder = path_test_name_folder
-            file_name = str(int(round(time.time() * 1000))) + ".png"
+            file_name = str(datetime.now().strftime("%Y-%m-%d %H:%M:%S")) + ".png"
             destination_file = os.path.join(report_directory, screenshot_folder, test_name, file_name)
             time.sleep(2)
             driver.save_screenshot(destination_file)
@@ -157,3 +158,5 @@ def pytest_html_results_table_row(report, cells):
     global size
     cells.insert(9, html.td(size))
     cells.pop()
+
+

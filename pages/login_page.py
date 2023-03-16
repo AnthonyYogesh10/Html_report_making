@@ -25,17 +25,14 @@ class LoginPage():
         return self.driver.find_element(By.ID, self.login_btn_field)
 
     def enter_username(self, username_value):
+        self.get_username_field().clear()
         self.get_username_field().send_keys(username_value)
         self.log.info('Assign ' + username_value + ' into username')
 
-    def pytest_html_results_table_row(report, cells):
-        del cells[1]
-        del cells[2]
-
     def enter_password(self, password_value):
+        self.get_password_field().clear()
         self.get_password_field().send_keys(password_value)
         self.log.info('Assign ' + password_value + ' into password')
-        # self.html.pytest_html_results_table_row()
 
     def click_login_btn(self):
         self.get_login_btn_field().click()
@@ -46,3 +43,12 @@ class LoginPage():
         self.enter_password(password)
         self.click_login_btn()
         time.sleep(7)
+
+    def check_login(self):
+        if self.driver.title == "Sign in to TruTesta":
+            self.log.info("Invalid username or password")
+            print("\n Invalid username or password")
+        elif self.driver.title == "TruTesta ™ Sample Tracker 2.0":
+            self.log.info("logged in successfully")
+            print("\n Logged in successfully")
+
