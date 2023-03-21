@@ -28,3 +28,4 @@ class Test_Credential:
         self.lp.login("robyn.hills@sematree.com", "*Welcome&Tech2022")
         self.lp.check_login()
         time.sleep(5)
+
