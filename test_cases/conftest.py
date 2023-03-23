@@ -75,7 +75,6 @@ def pytest_html_results_table_header(cells):
 
 # for take screenshot in pytest html
 @pytest.hookimpl(hookwrapper=True)
-
 def pytest_runtest_makereport(item):
     pytest_html = item.config.pluginmanager.getplugin("html")
     outcome = yield
