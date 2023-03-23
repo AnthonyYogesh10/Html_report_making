@@ -1,16 +1,16 @@
-21-Mar-23 20:09:31 LoginPage INFO:Assign test@gmail.com into username
-21-Mar-23 20:09:31 LoginPage INFO:Assign *Welcome&Tech2022 into password
-21-Mar-23 20:09:32 LoginPage INFO:Click on login button
-21-Mar-23 20:09:39 LoginPage INFO:Invalid username or password
-21-Mar-23 20:09:43 LoginPage INFO:Assign robyn.hills@sematree.com into username
-21-Mar-23 20:09:43 LoginPage INFO:Assign *Welcome&Tech2021 into password
-21-Mar-23 20:09:44 LoginPage INFO:Click on login button
-21-Mar-23 20:09:51 LoginPage INFO:Invalid username or password
-21-Mar-23 20:09:55 LoginPage INFO:Assign test@gmail.com into username
-21-Mar-23 20:09:55 LoginPage INFO:Assign *Welcome&Tech2021 into password
-21-Mar-23 20:09:56 LoginPage INFO:Click on login button
-21-Mar-23 20:10:03 LoginPage INFO:Invalid username or password
-21-Mar-23 20:10:07 LoginPage INFO:Assign robyn.hills@sematree.com into username
-21-Mar-23 20:10:07 LoginPage INFO:Assign *Welcome&Tech2022 into password
-21-Mar-23 20:10:09 LoginPage INFO:Click on login button
-21-Mar-23 20:10:16 LoginPage INFO:logged in successfully
+23-Mar-23 19:42:38 LoginPage INFO:Assign test@gmail.com into username
+23-Mar-23 19:42:38 LoginPage INFO:Assign *Welcome&Tech2022 into password
+23-Mar-23 19:42:38 LoginPage INFO:Click on login button
+23-Mar-23 19:42:45 LoginPage INFO:Invalid username or password
+23-Mar-23 19:42:50 LoginPage INFO:Assign robyn.hills@sematree.com into username
+23-Mar-23 19:42:50 LoginPage INFO:Assign *Welcome&Tech2021 into password
+23-Mar-23 19:42:50 LoginPage INFO:Click on login button
+23-Mar-23 19:42:57 LoginPage INFO:Invalid username or password
+23-Mar-23 19:43:02 LoginPage INFO:Assign test@gmail.com into username
+23-Mar-23 19:43:02 LoginPage INFO:Assign *Welcome&Tech2021 into password
+23-Mar-23 19:43:03 LoginPage INFO:Click on login button
+23-Mar-23 19:43:10 LoginPage INFO:Invalid username or password
+23-Mar-23 19:43:14 LoginPage INFO:Assign robyn.hills@sematree.com into username
+23-Mar-23 19:43:14 LoginPage INFO:Assign *Welcome&Tech2022 into password
+23-Mar-23 19:43:16 LoginPage INFO:Click on login button
+23-Mar-23 19:43:23 LoginPage INFO:logged in successfully
