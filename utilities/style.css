@@ -141,14 +141,14 @@ div.video video {
 
 .expander::after {
   content: " (show details)";
-  color: #BBB;
+  color: #475742;
   font-style: italic;
   cursor: pointer;
 }
 
 .collapser::after {
   content: " (hide details)";
-  color: #BBB;
+  color: #475742;
   font-style: italic;
   cursor: pointer;
 }
@@ -183,3 +183,5 @@ div.video video {
   /*finish triangle*/
   border-top: 8px solid black;
 }
+
+

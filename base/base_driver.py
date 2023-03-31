@@ -3,6 +3,7 @@ import time
 from selenium.common import ElementClickInterceptedException
 from pages.home_page import HomePage
 from utilities.utilities import utils
+from pytest_excel import pytest_excel
 
 
 class BaseDriver:

@@ -1,5 +1,6 @@
 import logging
 import os
+import sys
 import time
 from datetime import datetime
 
@@ -10,9 +11,9 @@ from selenium.webdriver.chrome.service import Service
 from platform import python_version
 from selenium.webdriver.support.wait import WebDriverWait
 
+
 serv_obj = Service("/home/cb/Downloads/webdrivers/chromedriver")
 driver = webdriver.Chrome(service=serv_obj)
-
 
 @pytest.fixture(scope="class")
 def setup(request):

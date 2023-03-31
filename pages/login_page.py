@@ -1,7 +1,6 @@
 import time
 
 from selenium.webdriver.common.by import By
-
 from utilities.utilities import utils
 
 
@@ -45,10 +44,11 @@ class LoginPage():
         time.sleep(7)
 
     def check_login(self):
-        if self.driver.title == "Sign in to TruTesta":
-            self.log.info("Invalid username or password")
-            print("\n Invalid username or password")
-        elif self.driver.title == "TruTesta ™ Sample Tracker 2.0":
-            self.log.info("logged in successfully")
-            print("\n Logged in successfully")
+        if self.driver.title == "TruTesta ™ Sample Tracker 2.0":
+            print('Login Passed')  # prints in green color
+        else:
+            print('Login Failed')
+
+        assert self.driver.title == "TruTesta ™ Sample Tracker 2.0", "login Failed"
+
 

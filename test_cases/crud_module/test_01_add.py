@@ -14,6 +14,7 @@ class Test_Add:
         self.hp = HomePage(self.driver)
         self.add_model = Add_model(self.driver)
 
+    @pytest.mark.pie
     def test_Add(self):
         self.lp.login("robyn.hills@sematree.com", "*Welcome&Tech2022")
         self.hp.click_menu_bar()
