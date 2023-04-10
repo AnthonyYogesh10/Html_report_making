@@ -5,8 +5,8 @@ How to Run this code::
 
 2) Open it in Pycharm Community Edition(Which is free and open source)
 
-3) Click Settings --> click project: Html_report_making --> then Python Interpeter
-   to install required packages.
+3) Click Settings --> click project: Html_report_making --> then Python Interpreter,
+   click '+' symbol to install required packages.
    
 4) Don't forget to install pytest-html
 
@@ -18,17 +18,18 @@ How to Run this code::
 
        2) **To run this code, please copy below code and paste it on terminal and press enter** 
 
-          pytest --html=../../reports/All_crud_report.html --excelreport=../../reports/All_crud_report.xlsx 
+           pytest --html=../../reports/html_reports/full_crud_test --csv=../../reports/csv_reports/full_crud_test.csv
           
    
        3) Uses of above code:
-          --html=../../reports/All_crud_report.html ---> it generate html report and store it on report dir,
-          --excelreport=../../reports/All_crud_report.xlsx ---> it generate excel report and store it on report dir
+          pytest --> is used to run the test 
+          --html=../../reports/html_reports/full_crud_test.htmll ---> it generate html report and store it on report dir,
+          --csv=../../reports/csv_reports/full_crud_test.csv ---> it generate csv report and store it on report dir
          
           Description: 
           ./../reports ---> report directory is selected
           All_crud_report.html ---> name of the html file   
-          All_crud_report.xlsx ---> name of the excel file 
+          All_crud_report.csv ---> name of the csv file 
 
        4) After execution of automation  report is stored on report folder then --> open with it on browser
        

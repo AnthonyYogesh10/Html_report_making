@@ -1,0 +1,5 @@
+Test_name,Test_case,Result,Duration,message,Browser_Name,Browser_Version,Platform_name,Python_Version,Screen_Size,Url
+Test_Credential,test_01_invalid_username,failed,7.90s,AssertionError: Invalid username or password,Chrome,112.0.5615.49,linux,3.10.6,1050 * 748,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
+Test_Credential,test_02_invalid_password,failed,7.90s,AssertionError: Invalid username or password,Chrome,112.0.5615.49,linux,3.10.6,1050 * 748,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
+Test_Credential,test_03_invalid_username_and_password,failed,7.82s,AssertionError: Invalid username or password,Chrome,112.0.5615.49,linux,3.10.6,1050 * 748,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
+Test_Credential,test_04_valid_username_and_password,passed,13.79s,,Chrome,112.0.5615.49,linux,3.10.6,1050 * 748,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab

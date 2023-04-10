@@ -253,7 +253,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>Truetesta Sample Tracker Report</h1>
-    <p>Report generated on 16-Mar-2023 at 20:02:05 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
+    <p>Report generated on 10-Apr-2023 at 19:14:48 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -264,16 +264,16 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>1050 * 748</td></tr>
       <tr>
         <td>Browser version</td>
-        <td>110.0.5481.100</td></tr>
+        <td>112.0.5615.49</td></tr>
       <tr>
-        <td>Plattform name</td>
+        <td>Platform name</td>
         <td>linux</td></tr>
       <tr>
         <td>Python version</td>
         <td>3.10.6</td></tr></table>
     <h2>Summary</h2>
-    <p>1 tests ran in 61.47 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">1 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>4 tests ran in 63.61 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">1 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">3 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -290,30 +290,88 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <th>Screen Size</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="10">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="passed results-table-row">
+      <tbody class="failed results-table-row">
         <tr>
           <td>1</td>
-          <td class="col-time">2023-03-16 20:02:05</td>
-          <td>Test_Search</td>
-          <td>test_search</td>
-          <td class="col-result">Passed</td>
-          <td class="col-time">57.19s</td>
-          <td><a href="https://keycloak-gbs-dev.trutesta.io/auth/realms/Intertek/protocol/openid-connect/auth?client_id=trutesta&amp;redirect_uri=https%3A%2F%2Fintertek-dev.trutesta.io%2Ftrusamples.mdb5%2F&amp;state=eebe6991-1ec6-4f06-8534-81d5a6fa6355&amp;response_mode=fragment&amp;response_type=code&amp;scope=openid&amp;nonce=10dcc108-fc2c-4ef7-8ae7-68a89c803e99" target="_blank">URL</a></td>
+          <td class="col-time">2023-04-10 19:14:48</td>
+          <td>Test_Credential</td>
+          <td>test_01_invalid_username</td>
+          <td class="col-result">Failed</td>
+          <td class="col-time">16.81s</td>
+          <td><a href="https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab" target="_blank">URL</a></td>
           <td>Chrome</td>
-          <td>110.0.5481.100</td>
+          <td>112.0.5615.49</td>
           <td>1050 * 748</td></tr>
         <tr>
           <td class="extra" colspan="10">
-            <div><div><img src="screenshots/Test_Search/2023-03-16 20:02:03.png" alt="screenshot" style="width:300px;height:200px" onclick="window.open(this.src)" align="right"/></div></div>
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>
-Total Items Found: 67
+            <div><div><img src="screenshots/Test_Credential/2023-04-10 19:14:04.png" alt="screenshot" style="width:300px;height:200px" onclick="window.open(this.src)" align="right"/></div></div>
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Login Failed
 
- Total Pages: 2
-<br/> -------------------------------Captured log call-------------------------------- <br/>Assign robyn.hills@sematree.com into username
-Assign *Welcome&amp;Tech2022 into password
-Click on login button
-Click on search button
-Click on 50 per Page
-Click on next button
-Total Items Found: 67
-Total Pages: 2<br/></div></td></tr></tbody></table></body></html>
+Invalid username or password
+<br/> -------------------------------Captured log call-------------------------------- <br/>19:13:54 - INFO - Assign test@gmail.com into username
+19:13:54 - INFO - Assign *Welcome&amp;Tech2022 into password
+19:13:55 - INFO - Click on login button
+19:14:02 - INFO - Login Failed<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td>2</td>
+          <td class="col-time">2023-04-10 19:14:48</td>
+          <td>Test_Credential</td>
+          <td>test_02_invalid_password</td>
+          <td class="col-result">Failed</td>
+          <td class="col-time">7.90s</td>
+          <td><a href="https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab" target="_blank">URL</a></td>
+          <td>Chrome</td>
+          <td>112.0.5615.49</td>
+          <td>1050 * 748</td></tr>
+        <tr>
+          <td class="extra" colspan="10">
+            <div><div><img src="screenshots/Test_Credential/2023-04-10 19:14:16.png" alt="screenshot" style="width:300px;height:200px" onclick="window.open(this.src)" align="right"/></div></div>
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Login Failed
+
+Invalid username or password
+<br/> -------------------------------Captured log call-------------------------------- <br/>19:14:06 - INFO - Assign robyn.hills@sematree.com into username
+19:14:06 - INFO - Assign *Welcome&amp;Tech2021 into password
+19:14:07 - INFO - Click on login button
+19:14:14 - INFO - Login Failed<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td>3</td>
+          <td class="col-time">2023-04-10 19:14:48</td>
+          <td>Test_Credential</td>
+          <td>test_03_invalid_username_and_password</td>
+          <td class="col-result">Failed</td>
+          <td class="col-time">7.82s</td>
+          <td><a href="https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab" target="_blank">URL</a></td>
+          <td>Chrome</td>
+          <td>112.0.5615.49</td>
+          <td>1050 * 748</td></tr>
+        <tr>
+          <td class="extra" colspan="10">
+            <div><div><img src="screenshots/Test_Credential/2023-04-10 19:14:28.png" alt="screenshot" style="width:300px;height:200px" onclick="window.open(this.src)" align="right"/></div></div>
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Login Failed
+
+Invalid username or password
+<br/> -------------------------------Captured log call-------------------------------- <br/>19:14:18 - INFO - Assign test@gmail.com into username
+19:14:18 - INFO - Assign *Welcome&amp;Tech2021 into password
+19:14:19 - INFO - Click on login button
+19:14:26 - INFO - Login Failed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td>4</td>
+          <td class="col-time">2023-04-10 19:14:48</td>
+          <td>Test_Credential</td>
+          <td>test_04_valid_username_and_password</td>
+          <td class="col-result">Passed</td>
+          <td class="col-time">13.90s</td>
+          <td><a href="https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab" target="_blank">URL</a></td>
+          <td>Chrome</td>
+          <td>112.0.5615.49</td>
+          <td>1050 * 748</td></tr>
+        <tr>
+          <td class="extra" colspan="10">
+            <div><div><img src="screenshots/Test_Credential/2023-04-10 19:14:46.png" alt="screenshot" style="width:300px;height:200px" onclick="window.open(this.src)" align="right"/></div></div>
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>19:14:30 - INFO - Assign robyn.hills@sematree.com into username
+19:14:30 - INFO - Assign *Welcome&amp;Tech2022 into password
+19:14:32 - INFO - Click on login button
+19:14:39 - INFO - Login Passed<br/></div></td></tr></tbody></table></body></html>

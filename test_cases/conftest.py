@@ -1,19 +1,23 @@
+import base64
 import logging
 import os
 import sys
 import time
 from datetime import datetime
 
+import outcome
+# import columns as columns
 import pytest
+from pytest_csv import column
 from py.xml import html
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from platform import python_version
 from selenium.webdriver.support.wait import WebDriverWait
 
-
 serv_obj = Service("/home/cb/Downloads/webdrivers/chromedriver")
 driver = webdriver.Chrome(service=serv_obj)
+
 
 @pytest.fixture(scope="class")
 def setup(request):
@@ -25,7 +29,6 @@ def setup(request):
     # wait = WebDriverWait(driver,10)
     time.sleep(6)
     request.cls.driver = driver
-
     yield
     driver.close()
 
@@ -44,7 +47,7 @@ def pytest_configure(config):
     capabilities = driver.capabilities
     browser_name = capabilities.get('browserName').capitalize()
     browser_version = capabilities.get('browserVersion')
-    plattform_name = capabilities.get('platformName')
+    platform_name = capabilities.get('platformName')
     display_size = driver.get_window_size("current")
     size = f"{display_size['width']} * {display_size['height']}"
 
@@ -52,7 +55,7 @@ def pytest_configure(config):
         "Browser name": browser_name,
         "Browser version": browser_version,
         "Browser screen size": size,
-        "Plattform name": plattform_name,
+        "Platform name": platform_name,
         "Python version": py_version,
     }
 
@@ -73,13 +76,13 @@ def pytest_html_results_table_header(cells):
     cells.insert(10, html.th('last one'))
     cells.pop()
 
+# to remove the additional traceback in html-report  comment longrepr on report in pytest-html
 
 # for take screenshot in pytest html
 @pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_makereport(item):
     pytest_html = item.config.pluginmanager.getplugin("html")
     outcome = yield
-
     # this is for getting result from pytest result
     report = outcome.get_result()
     # this is for get node id from pytest result
@@ -116,7 +119,7 @@ def pytest_runtest_makereport(item):
 serial_no = 0
 
 
-# Change table row  pytest-html
+# Content or data for table row of pytest-html
 def pytest_html_results_table_row(report, cells):
     global driver
     del cells[:]
@@ -141,16 +144,13 @@ def pytest_html_results_table_row(report, cells):
     duration = '{:.2f}s'.format(report.duration)
     cells.insert(5, html.td(duration, class_='col-time'))
     # for insert url on report
-    url = "https://keycloak-gbs-dev.trutesta.io/auth/realms/Intertek/protocol/openid-connect/auth?client_id=trutesta" \
-          "&redirect_uri=https%3A%2F%2Fintertek-dev.trutesta.io%2Ftrusamples.mdb5%2F&state=eebe6991-1ec6-4f06-8534" \
-          "-81d5a6fa6355&response_mode=fragment&response_type=code&scope=openid&nonce=10dcc108-fc2c-4ef7-8ae7" \
-          "-68a89c803e99"
+    url = "https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample" \
+          "-details-tab"
     cells.insert(6, html.td(html.a('URL', href=url, target="_blank")))
     # for browser name
     capabilities = driver.capabilities
-    browser_name = capabilities.get('browserName')
-    browser_name_in_cap = browser_name.capitalize()
-    cells.insert(7, html.td(browser_name_in_cap))
+    browser_name = capabilities.get('browserName').capitalize()
+    cells.insert(7, html.td(browser_name))
     # for browser version
     browser_version = capabilities.get('browserVersion')
     cells.insert(8, html.td(browser_version))
@@ -158,3 +158,26 @@ def pytest_html_results_table_row(report, cells):
     global size
     cells.insert(9, html.td(size))
     cells.pop()
+
+
+# change the csv file format
+def my_multiple_columns(item, report):
+    capabilities = driver.capabilities
+    yield "Browser_Name", capabilities.get('browserName').capitalize()
+    yield "Browser_Version", capabilities.get('browserVersion')
+    yield "Screen_Size", size
+    yield "Platform_name", capabilities.get('platformName')
+    yield "Python_Version", python_version()
+    yield "Url", "https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab"
+
+
+def pytest_csv_register_columns(columns):
+    columns['test_name'] = lambda item, report: {'Test_name': report.test_name}
+
+    columns['test_case'] = lambda item, report: {'Test_case': report.test_case}
+
+    columns['result'] = lambda item, report: {'Result': report.outcome}
+
+    columns['duration'] = lambda item, report: {'Duration': '{:.2f}s'.format(report.duration)}
+
+    columns['my_multiple_columns'] = my_multiple_columns

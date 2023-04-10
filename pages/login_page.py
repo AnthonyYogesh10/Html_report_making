@@ -1,3 +1,4 @@
+import csv
 import time
 
 from selenium.webdriver.common.by import By
@@ -45,10 +46,15 @@ class LoginPage():
 
     def check_login(self):
         if self.driver.title == "TruTesta ™ Sample Tracker 2.0":
-            print('Login Passed')  # prints in green color
+            print('Login Passed')
+            print('\nTitle == TruTesta ™ Sample Tracker 2.0')
+            self.log.info('Login Passed')
         else:
             print('Login Failed')
+            print('\nInvalid username or password')
+            self.log.info('Login Failed')
 
-        assert self.driver.title == "TruTesta ™ Sample Tracker 2.0", "login Failed"
+        assert self.driver.title == "TruTesta ™ Sample Tracker 2.0", "Invalid username or password"
+
 
 

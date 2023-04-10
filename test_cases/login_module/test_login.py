@@ -24,10 +24,13 @@ class Test_Credential:
         self.lp.login("test@gmail.com", "*Welcome&Tech2021")
         self.lp.check_login()
 
-    def test_04_valid_username_and_password(self):
+    def test_04_valid_username_and_password(self, capsys):
         self.lp.login("robyn.hills@sematree.com", "*Welcome&Tech2022")
         self.lp.check_login()
+        captured = capsys.readouterr()
         time.sleep(5)
+
+
 
 
 
