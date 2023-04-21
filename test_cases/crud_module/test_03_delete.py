@@ -1,21 +1,38 @@
 import time
+import unittest
 
 import pytest
 from pages.home_page import HomePage
-from pages.login_page import LoginPage
 from pages.delete_modal import Delete_page
+from ddt import data, unpack, ddt, file_data
+
+from utilities.utilities import utils
+
+ul = utils()
 
 
 @pytest.mark.usefixtures("setup")
-class Test_Delete():
+@ddt
+class Test_Delete(unittest.TestCase):
     @pytest.fixture(autouse=True)
     def class_setup(self):
+        self.hp = HomePage(self.driver)
         self.delete_modal = Delete_page(self.driver)
 
-    def test_delete(self):
-        self.lp.login("robyn.hills@sematree.com", "*Welcome&Tech2022")
+    def test_01_login(self):
+        # self.lp.login("robyn.hills@sematree.com", "*Welcome&Tech2022")
         self.hp.click_menu_bar()
         self.hp.navigate_to("Administration", "Categories", "Sample Types")
+
+    @data(*ul.read_data_from_excel(
+        "/home/chris/Desktop/automation/Html_report_making/test_data/del_data.xlsx", "Sheet1"
+    ))
+    @unpack
+    def test_02_delete(self, name):
+        self.hp.enter_search_input(name)
+        self.hp.click_search_button()
         self.hp.click_delete_btn()
-        self.dele_modal.click_delete_confirm()
-        self.dele_modal.delete_toaster()
+        self.delete_modal.click_delete_confirm()
+        self.delete_modal.delete_toaster()
+
+

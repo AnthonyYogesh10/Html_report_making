@@ -1,2 +1,2 @@
 Test_name,Test_case,Result,Duration,message,Browser_Name,Browser_Version,Platform_name,Python_Version,Screen_Size,Url
-Test_Search,test_search,passed,48.75s,,Chrome,112.0.5615.49,linux,3.10.6,1050 * 748,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
+Test_Search,test_search,passed,39.90s,,Chrome,112.0.5615.49,linux,3.10.6,1050 * 731,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab

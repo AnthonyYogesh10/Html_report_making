@@ -15,6 +15,8 @@ from selenium.webdriver.chrome.service import Service
 from platform import python_version
 from selenium.webdriver.support.wait import WebDriverWait
 
+from pages.login_page import LoginPage
+
 serv_obj = Service("/home/cb/Downloads/webdrivers/chromedriver")
 driver = webdriver.Chrome(service=serv_obj)
 
@@ -28,6 +30,8 @@ def setup(request):
     driver.maximize_window()
     # wait = WebDriverWait(driver,10)
     time.sleep(6)
+    lp = LoginPage(driver)
+    lp.login("robyn.hills@sematree.com", "*Welcome&Tech2022")
     request.cls.driver = driver
     yield
     driver.close()
@@ -75,6 +79,7 @@ def pytest_html_results_table_header(cells):
     cells.insert(9, html.th('Screen Size'))
     cells.insert(10, html.th('last one'))
     cells.pop()
+
 
 # to remove the additional traceback in html-report  comment longrepr on report in pytest-html
 

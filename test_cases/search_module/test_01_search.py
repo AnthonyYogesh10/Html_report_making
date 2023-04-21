@@ -18,7 +18,7 @@ class Test_Search:
         self.base = BaseDriver(self.driver)
 
     def test_search(self):
-        self.lp.login("robyn.hills@sematree.com", "*Welcome&Tech2022")
+        # self.lp.login("robyn.hills@sematree.com", "*Welcome&Tech2022")
         # self.hp.click_menu_bar()
         # self.hp.navigate_to("Administration", "Categories", "Sample Types")
         # self.hp.enter_search_input('test')

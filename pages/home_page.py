@@ -31,6 +31,7 @@ class HomePage():
     data_list_field = "//div[@id='mid-list']/a"
     page_numbers_field = "//ul[@class='pagination pagination-sm justify-content-center']/li"
     next_page_field = "//a[normalize-space()='>']"
+    sample_names_field = "//*[@id = 'mid-list']/a/div[1]"
 
     # Loactors to Use (It is used to avoid store variables
     #                 eg: name = xpath
@@ -91,6 +92,9 @@ class HomePage():
     def get_next_field(self):
         return self.driver.find_element(By.XPATH, self.next_page_field)
 
+    def get_sample_names(self):
+        return self.driver.find_elements(By.XPATH, self.sample_names_field)
+
     def click_menu_bar(self):
         self.get_menubar_field().click()
         self.log.info("Click on menubar")
@@ -132,6 +136,7 @@ class HomePage():
         self.log.info("Click on delete button")
         time.sleep(3)
 
+    # added for search operation
     def enter_search_input(self, search_value):
         self.get_search_input_field().send_keys(search_value)
         self.log.info("Assign " + search_value + ' into search input')
@@ -139,6 +144,8 @@ class HomePage():
 
     def click_search_button(self):
         self.get_search_button_field().click()
+        time.sleep(2)
+        self.get_search_input_field().clear()
         self.log.info("Click on search button")
         time.sleep(3)
 
@@ -154,12 +161,12 @@ class HomePage():
                 self.log.info(f"Click on {data_per_page}")
         time.sleep(5)
 
-    def data_list(self):
-        list_of_data = self.get_data_list_field()
-        length = len(list_of_data)
-        self.log.info(f'Total item found {length}')
-        for data in list_of_data:
-            print(f'\n{data.text.strip()}')
+    # def samples_names(self, name):
+    #     list_of_samples = self.get_sample_names()
+    #     for sample_name in list_of_samples:
+    #         if name == sample_name.text.strip(): # strip method is used to remove extra space from the string
+    #             sample_name.click()
+    #             time.sleep(3)
 
     def navigate_to(self, navigate_to, administration, category):
         self.select_side_nav(navigate_to)

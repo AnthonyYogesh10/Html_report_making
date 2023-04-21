@@ -1,0 +1,22 @@
+21-Apr-23 20:01:46 LoginPage INFO:Assign robyn.hills@sematree.com into username
+21-Apr-23 20:01:47 LoginPage INFO:Assign *Welcome&Tech2022 into password
+21-Apr-23 20:01:48 LoginPage INFO:Click on login button
+21-Apr-23 20:01:55 HomePage INFO:Click on menubar
+21-Apr-23 20:01:58 HomePage INFO:Click on side_nav
+21-Apr-23 20:02:01 HomePage INFO:Click on administration
+21-Apr-23 20:02:05 HomePage INFO:Click on category
+21-Apr-23 20:02:08 HomePage INFO:Assign Sample_1 into search input
+21-Apr-23 20:02:13 HomePage INFO:Click on search button
+21-Apr-23 20:02:16 HomePage INFO:Click on delete button
+21-Apr-23 20:02:20 Delete_page INFO:Click on confirm button
+21-Apr-23 20:02:25 Delete_page INFO:testcase delete passed
+21-Apr-23 20:02:25 HomePage INFO:Assign Sample_2 into search input
+21-Apr-23 20:02:30 HomePage INFO:Click on search button
+21-Apr-23 20:02:33 HomePage INFO:Click on delete button
+21-Apr-23 20:02:36 Delete_page INFO:Click on confirm button
+21-Apr-23 20:02:41 Delete_page INFO:testcase delete passed
+21-Apr-23 20:02:41 HomePage INFO:Assign Sample_3 into search input
+21-Apr-23 20:02:47 HomePage INFO:Click on search button
+21-Apr-23 20:02:50 HomePage INFO:Click on delete button
+21-Apr-23 20:02:53 Delete_page INFO:Click on confirm button
+21-Apr-23 20:02:58 Delete_page INFO:testcase delete passed

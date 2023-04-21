@@ -1,5 +1,6 @@
 import inspect
 import logging
+from openpyxl import Workbook, load_workbook
 
 
 class utils():
@@ -21,5 +22,20 @@ class utils():
 
         return logger
 
+    def read_data_from_excel(self, file_name, sheet):
+        # empty list to store read data
+        data_list = []
+        wb = load_workbook(filename=file_name)
+        ws = wb[sheet]
+        # find the length of the row and column
+        row_count = ws.max_row
+        col_count = ws.max_column
+
+        for i in range(2, row_count + 1):
+            row = []
+            for j in range(1, col_count):
+                row.append(ws.cell(row=i, column=j).value)
+            data_list.append(row)
+        return data_list
 # utilities are used to set common things which not related with driver
 # base module are used to set common things which are related with driver
