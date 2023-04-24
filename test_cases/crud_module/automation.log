@@ -1,22 +1,19 @@
-21-Apr-23 20:01:46 LoginPage INFO:Assign robyn.hills@sematree.com into username
-21-Apr-23 20:01:47 LoginPage INFO:Assign *Welcome&Tech2022 into password
-21-Apr-23 20:01:48 LoginPage INFO:Click on login button
-21-Apr-23 20:01:55 HomePage INFO:Click on menubar
-21-Apr-23 20:01:58 HomePage INFO:Click on side_nav
-21-Apr-23 20:02:01 HomePage INFO:Click on administration
-21-Apr-23 20:02:05 HomePage INFO:Click on category
-21-Apr-23 20:02:08 HomePage INFO:Assign Sample_1 into search input
-21-Apr-23 20:02:13 HomePage INFO:Click on search button
-21-Apr-23 20:02:16 HomePage INFO:Click on delete button
-21-Apr-23 20:02:20 Delete_page INFO:Click on confirm button
-21-Apr-23 20:02:25 Delete_page INFO:testcase delete passed
-21-Apr-23 20:02:25 HomePage INFO:Assign Sample_2 into search input
-21-Apr-23 20:02:30 HomePage INFO:Click on search button
-21-Apr-23 20:02:33 HomePage INFO:Click on delete button
-21-Apr-23 20:02:36 Delete_page INFO:Click on confirm button
-21-Apr-23 20:02:41 Delete_page INFO:testcase delete passed
-21-Apr-23 20:02:41 HomePage INFO:Assign Sample_3 into search input
-21-Apr-23 20:02:47 HomePage INFO:Click on search button
-21-Apr-23 20:02:50 HomePage INFO:Click on delete button
-21-Apr-23 20:02:53 Delete_page INFO:Click on confirm button
-21-Apr-23 20:02:58 Delete_page INFO:testcase delete passed
+24-Apr-23 15:58:52 LoginPage INFO:Assign robyn.hills@sematree.com into username
+24-Apr-23 15:58:52 LoginPage INFO:Assign *Welcome&Tech2022 into password
+24-Apr-23 15:58:53 LoginPage INFO:Click on login button
+24-Apr-23 15:59:02 HomePage INFO:Click on menubar
+24-Apr-23 15:59:05 HomePage INFO:Click on side_nav
+24-Apr-23 15:59:08 HomePage INFO:Click on administration
+24-Apr-23 15:59:11 HomePage INFO:Click on category
+24-Apr-23 15:59:15 HomePage INFO:Assign Sample_1 into search input
+24-Apr-23 15:59:20 HomePage INFO:Click on search button
+24-Apr-23 15:59:38 HomePage INFO:Assign Sample_2 into search input
+24-Apr-23 15:59:43 HomePage INFO:Click on search button
+24-Apr-23 15:59:47 HomePage INFO:Click on modify
+24-Apr-23 15:59:52 Modify_page INFO:Assign Sample_mod2 into name
+24-Apr-23 15:59:52 Modify_page INFO:Assign test_mod_2 into description
+24-Apr-23 15:59:52 Modify_page INFO:Assign mod468 into bussiness code
+24-Apr-23 15:59:55 Modify_page INFO:Click on save button
+24-Apr-23 15:59:58 Modify_page INFO:testcase modify failed
+24-Apr-23 15:59:58 HomePage INFO:Assign Sample_3 into search input
+24-Apr-23 16:00:04 HomePage INFO:Click on search button

@@ -4,7 +4,7 @@ import unittest
 import pytest
 from pages.home_page import HomePage
 from pages.delete_modal import Delete_page
-from ddt import data, unpack, ddt, file_data
+from ddt import data, unpack, ddt
 
 from utilities.utilities import utils
 
@@ -20,7 +20,6 @@ class Test_Delete(unittest.TestCase):
         self.delete_modal = Delete_page(self.driver)
 
     def test_01_login(self):
-        # self.lp.login("robyn.hills@sematree.com", "*Welcome&Tech2022")
         self.hp.click_menu_bar()
         self.hp.navigate_to("Administration", "Categories", "Sample Types")
 
