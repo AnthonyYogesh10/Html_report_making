@@ -18,12 +18,12 @@ How to Run this code::
 
        2) **To run this code, please copy below code and paste it on terminal and press enter** 
 
-           pytest --html=../../reports/html_reports/full_crud_test --csv=../../reports/csv_reports/full_crud_test.csv
+           pytest --html=../../reports/html_reports/full_crud_test.html --csv=../../reports/csv_reports/full_crud_test.csv
           
    
        3) Uses of above code:
           pytest --> is used to run the test 
-          --html=../../reports/html_reports/full_crud_test.htmll ---> it generate html report and store it on report dir,
+          --html=../../reports/html_reports/full_crud_test.html ---> it generate html report and store it on report dir,
           --csv=../../reports/csv_reports/full_crud_test.csv ---> it generate csv report and store it on report dir
          
           Description: 
