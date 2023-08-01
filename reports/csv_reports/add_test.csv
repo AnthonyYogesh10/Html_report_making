@@ -1,0 +1,5 @@
+Test_name,Test_case,Result,Duration,message,Browser_Name,Browser_Version,Platform_name,Python_Version,Screen_Size,Url
+Test_Add,test_01_login,passed,13.44s,,Chrome,112.0.5615.49,linux,3.10.6,1050 * 731,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
+Test_Add,test_02_add_1___Sample_1____New_sample_added____8838A__,passed,11.94s,,Chrome,112.0.5615.49,linux,3.10.6,1050 * 731,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
+Test_Add,test_02_add_2___Sample_2____New_sample_added2____8838A2__,passed,11.67s,,Chrome,112.0.5615.49,linux,3.10.6,1050 * 731,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
+Test_Add,test_02_add_3___Sample_3____New_sample_added3____8838A3__,passed,11.83s,,Chrome,112.0.5615.49,linux,3.10.6,1050 * 731,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab

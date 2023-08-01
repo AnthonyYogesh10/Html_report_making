@@ -40,7 +40,11 @@ class BaseDriver:
         elif data_per_page == '50 per Page':
             scroll_value = 6
         page_numbers = self.hp.get_page_numbers_field()
-        length_of_page_numbers = len(page_numbers) - 3
+        length_page = len(page_numbers)
+        if length_page == 0:
+            length_of_page_numbers = 0
+        else:
+            length_of_page_numbers = lenth_page - 3
         length_of_data_list = []
         for i in range(0, length_of_page_numbers):
             data_list = len(self.hp.get_data_list_field())

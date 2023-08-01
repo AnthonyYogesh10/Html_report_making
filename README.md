@@ -14,7 +14,10 @@ How to Run this code::
 
 6) Concept is to store Reports in reports folder so use the below code to get html report and excel report and store them on report folder,
  
-       1) First select the directory of TestCase eg : /Desktop/automation/Html_report_making/test_cases/full_crud_module
+       1) First select the directory of TestCase
+
+          i) use cd to change directory 
+          ii) eg : /Desktop/automation/Html_report_making/test_cases/full_crud_module
 
        2) **To run this code, please copy below code and paste it on terminal and press enter** 
 

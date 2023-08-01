@@ -1,7 +1,11 @@
 Test_name,Test_case,Result,Duration,message,Browser_Name,Browser_Version,Platform_name,Python_Version,Screen_Size,Url
-Test_AllCrud,test_login,passed,8.77s,,Chrome,112.0.5615.49,linux,3.10.6,1050 * 748,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
-Test_AllCrud,test_navigate,passed,12.90s,,Chrome,112.0.5615.49,linux,3.10.6,1050 * 748,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
-Test_AllCrud,test_add,passed,11.88s,,Chrome,112.0.5615.49,linux,3.10.6,1050 * 748,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
-Test_AllCrud,test_search,passed,6.36s,,Chrome,112.0.5615.49,linux,3.10.6,1050 * 748,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
-Test_AllCrud,test_modify,passed,11.92s,,Chrome,112.0.5615.49,linux,3.10.6,1050 * 748,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
-Test_AllCrud,test_delete,passed,8.31s,,Chrome,112.0.5615.49,linux,3.10.6,1050 * 748,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
+Test_AllCrud,test_01_invalid_username,passed,7.93s,,Chrome,114.0.5735.198,linux,3.10.12,1050 * 748,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
+Test_AllCrud,test_02_invalid_password,passed,7.82s,,Chrome,114.0.5735.198,linux,3.10.12,1050 * 748,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
+Test_AllCrud,test_03_invalid_username_and_password,passed,7.75s,,Chrome,114.0.5735.198,linux,3.10.12,1050 * 748,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
+Test_AllCrud,test_04_valid_username_and_password,passed,14.08s,,Chrome,114.0.5735.198,linux,3.10.12,1050 * 748,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
+Test_AllCrud,test_05_navigate,passed,12.84s,,Chrome,114.0.5735.198,linux,3.10.12,1050 * 748,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
+Test_AllCrud,test_06_add,passed,11.92s,,Chrome,114.0.5735.198,linux,3.10.12,1050 * 748,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
+Test_AllCrud,test_07_search,passed,8.43s,,Chrome,114.0.5735.198,linux,3.10.12,1050 * 748,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
+Test_AllCrud,test_08_modify,passed,11.93s,,Chrome,114.0.5735.198,linux,3.10.12,1050 * 748,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
+Test_AllCrud,test_09_delete,passed,8.32s,,Chrome,114.0.5735.198,linux,3.10.12,1050 * 748,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
+Test_AllCrud,test_10_search,passed,20.56s,,Chrome,114.0.5735.198,linux,3.10.12,1050 * 748,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab

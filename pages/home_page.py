@@ -8,7 +8,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from utilities.utilities import utils
 
 
-class HomePage():
+class HomePage:
     log = utils().custom_logger(mode='a')
 
     def __init__(self, driver):
@@ -143,9 +143,9 @@ class HomePage():
         time.sleep(3)
 
     def click_search_button(self):
-        self.get_search_button_field().click()
-        time.sleep(2)
         self.get_search_input_field().clear()
+        time.sleep(2)
+        self.get_search_button_field().click()
         self.log.info("Click on search button")
         time.sleep(3)
 

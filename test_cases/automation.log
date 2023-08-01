@@ -1,0 +1,16 @@
+01-Aug-23 18:23:37 LoginPage INFO:Assign test@gmail.com into username
+01-Aug-23 18:23:37 LoginPage INFO:Assign *Welcome&Tech2022 into password
+01-Aug-23 18:23:38 LoginPage INFO:Click on login button
+01-Aug-23 18:23:45 LoginPage INFO:Login Failed
+01-Aug-23 18:23:49 LoginPage INFO:Assign robyn.hills@sematree.com into username
+01-Aug-23 18:23:49 LoginPage INFO:Assign *Welcome&Tech2021 into password
+01-Aug-23 18:23:50 LoginPage INFO:Click on login button
+01-Aug-23 18:23:57 LoginPage INFO:Login Failed
+01-Aug-23 18:24:01 LoginPage INFO:Assign test@gmail.com into username
+01-Aug-23 18:24:01 LoginPage INFO:Assign *Welcome&Tech2021 into password
+01-Aug-23 18:24:02 LoginPage INFO:Click on login button
+01-Aug-23 18:24:09 LoginPage INFO:Login Failed
+01-Aug-23 18:24:13 LoginPage INFO:Assign robyn.hills@sematree.com into username
+01-Aug-23 18:24:14 LoginPage INFO:Assign *Welcome&Tech2022 into password
+01-Aug-23 18:24:15 LoginPage INFO:Click on login button
+01-Aug-23 18:24:22 LoginPage INFO:Login Passed
