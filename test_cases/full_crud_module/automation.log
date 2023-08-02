@@ -1,41 +1,41 @@
-01-Aug-23 19:53:42 LoginPage INFO:Assign test@gmail.com into username
-01-Aug-23 19:53:42 LoginPage INFO:Assign *Welcome&Tech2022 into password
-01-Aug-23 19:53:43 LoginPage INFO:Click on login button
-01-Aug-23 19:53:50 LoginPage INFO:Login Failed
-01-Aug-23 19:53:54 LoginPage INFO:Assign robyn.hills@sematree.com into username
-01-Aug-23 19:53:54 LoginPage INFO:Assign *Welcome&Tech2021 into password
-01-Aug-23 19:53:55 LoginPage INFO:Click on login button
-01-Aug-23 19:54:02 LoginPage INFO:Login Failed
-01-Aug-23 19:54:06 LoginPage INFO:Assign test@gmail.com into username
-01-Aug-23 19:54:06 LoginPage INFO:Assign *Welcome&Tech2021 into password
-01-Aug-23 19:54:07 LoginPage INFO:Click on login button
-01-Aug-23 19:54:14 LoginPage INFO:Login Failed
-01-Aug-23 19:54:18 LoginPage INFO:Assign robyn.hills@sematree.com into username
-01-Aug-23 19:54:18 LoginPage INFO:Assign *Welcome&Tech2022 into password
-01-Aug-23 19:54:20 LoginPage INFO:Click on login button
-01-Aug-23 19:54:27 LoginPage INFO:Login Passed
-01-Aug-23 19:54:37 HomePage INFO:Click on menubar
-01-Aug-23 19:54:40 HomePage INFO:Click on side_nav
-01-Aug-23 19:54:43 HomePage INFO:Click on administration
-01-Aug-23 19:54:46 HomePage INFO:Click on category
-01-Aug-23 19:54:54 HomePage INFO:Click on add button
-01-Aug-23 19:54:57 Add_model INFO:Assign new sample2 into name
-01-Aug-23 19:54:57 Add_model INFO:Assign added for testing into description
-01-Aug-23 19:54:57 Add_model INFO:Assign 8838yo203 into bussiness code
-01-Aug-23 19:55:00 Add_model INFO:Click on submit button
-01-Aug-23 19:55:05 Add_model INFO:testcase add passed
-01-Aug-23 19:55:10 HomePage INFO:Assign new sample2 into search input
-01-Aug-23 19:55:15 HomePage INFO:Click on search button
-01-Aug-23 19:55:22 HomePage INFO:Click on modify
-01-Aug-23 19:55:28 Modify_page INFO:Assign sampleTracker_modify into name
-01-Aug-23 19:55:28 Modify_page INFO:Assign Modified data into description
-01-Aug-23 19:55:28 Modify_page INFO:Assign 810Ybecse into bussiness code
-01-Aug-23 19:55:31 Modify_page INFO:Click on save button
-01-Aug-23 19:55:34 Modify_page INFO:testcase modify passed
-01-Aug-23 19:55:38 HomePage INFO:Click on delete button
-01-Aug-23 19:55:41 Delete_page INFO:Click on confirm button
-01-Aug-23 19:55:47 Delete_page INFO:testcase delete passed
-01-Aug-23 19:55:53 HomePage INFO:Click on search button
-01-Aug-23 19:56:01 HomePage INFO:Click on 50 per Page
-01-Aug-23 19:56:06 BaseDriver INFO:Total Items Found: 0
-01-Aug-23 19:56:06 BaseDriver INFO:Total Pages: 0
+02-Aug-23 16:07:56 LoginPage INFO:Assign test@gmail.com into username
+02-Aug-23 16:07:56 LoginPage INFO:Assign *Welcome&Tech2022 into password
+02-Aug-23 16:07:56 LoginPage INFO:Click on login button
+02-Aug-23 16:08:03 LoginPage INFO:Login Failed
+02-Aug-23 16:08:08 LoginPage INFO:Assign robyn.hills@sematree.com into username
+02-Aug-23 16:08:08 LoginPage INFO:Assign *Welcome&Tech2021 into password
+02-Aug-23 16:08:09 LoginPage INFO:Click on login button
+02-Aug-23 16:08:16 LoginPage INFO:Login Failed
+02-Aug-23 16:08:20 LoginPage INFO:Assign test@gmail.com into username
+02-Aug-23 16:08:20 LoginPage INFO:Assign *Welcome&Tech2021 into password
+02-Aug-23 16:08:21 LoginPage INFO:Click on login button
+02-Aug-23 16:08:28 LoginPage INFO:Login Failed
+02-Aug-23 16:08:32 LoginPage INFO:Assign robyn.hills@sematree.com into username
+02-Aug-23 16:08:32 LoginPage INFO:Assign *Welcome&Tech2022 into password
+02-Aug-23 16:08:34 LoginPage INFO:Click on login button
+02-Aug-23 16:08:41 LoginPage INFO:Login Passed
+02-Aug-23 16:08:50 HomePage INFO:Click on menubar
+02-Aug-23 16:08:53 HomePage INFO:Click on side_nav
+02-Aug-23 16:08:56 HomePage INFO:Click on administration
+02-Aug-23 16:09:00 HomePage INFO:Click on category
+02-Aug-23 16:09:07 HomePage INFO:Click on add button
+02-Aug-23 16:09:10 Add_model INFO:Assign new sample2 into name
+02-Aug-23 16:09:10 Add_model INFO:Assign added for testing into description
+02-Aug-23 16:09:10 Add_model INFO:Assign 8838yo203 into bussiness code
+02-Aug-23 16:09:14 Add_model INFO:Click on submit button
+02-Aug-23 16:09:19 Add_model INFO:testcase add passed
+02-Aug-23 16:09:23 HomePage INFO:Assign new sample2 into search input
+02-Aug-23 16:09:28 HomePage INFO:Click on search button
+02-Aug-23 16:09:36 HomePage INFO:Click on modify
+02-Aug-23 16:09:41 Modify_page INFO:Assign sampleTracker_modify into name
+02-Aug-23 16:09:41 Modify_page INFO:Assign Modified data into description
+02-Aug-23 16:09:41 Modify_page INFO:Assign 810Ybecse into bussiness code
+02-Aug-23 16:09:44 Modify_page INFO:Click on save button
+02-Aug-23 16:09:47 Modify_page INFO:testcase modify passed
+02-Aug-23 16:09:52 HomePage INFO:Click on delete button
+02-Aug-23 16:09:55 Delete_page INFO:Click on confirm button
+02-Aug-23 16:10:00 Delete_page INFO:testcase delete passed
+02-Aug-23 16:10:06 HomePage INFO:Click on search button
+02-Aug-23 16:10:15 HomePage INFO:Click on 50 per Page
+02-Aug-23 16:10:20 BaseDriver INFO:Total Items Found: 0
+02-Aug-23 16:10:20 BaseDriver INFO:Total Pages: 0

@@ -69,5 +69,3 @@ class Test_AllCrud:
         self.hp.select_per_page_list("50 per Page")
         self.base.scroll_n_click_next("50 per Page")
         time.sleep(5)
-
-

@@ -16,19 +16,19 @@ ul = utils()
 class Test_Add(unittest.TestCase):  # unittest.TestCase without this it cant work
     @pytest.fixture(autouse=True)
     def class_setup(self):
-        # self.lp = LoginPage(self.driver)
+        self.lp = LoginPage(self.driver)
         self.hp = HomePage(self.driver)
         self.add_model = Add_model(self.driver)
 
-    # def test_01_login(self):
-    #     # self.lp.login("robyn.hills@sematree.com", "*Welcome&Tech2022")
-    #     self.hp.click_menu_bar()
-    #     self.hp.navigate_to("Administration", "Categories", "Sample Types")
+    def test_01_login(self):
+        self.lp.login("robyn.hills@sematree.com", "*Welcome&Tech2022")
+        self.hp.click_menu_bar()
+        self.hp.navigate_to("Administration", "Categories", "Sample Types")
 
     @data(
-        *ul.read_data_from_excel("/home/chris/Desktop/automation/Html_report_making/test_data/add_data.xlsx", 'Sheet1'))
+        *ul.read_data_from_excel("../../test_data/add_data.xlsx", 'Sheet1'))
     @unpack
-    def test_01_add_by_ddt_method(self, name, description, bussiness_code):
+    def test_02_add_by_ddt_method(self, name, description, bussiness_code):
         self.hp.click_add_button()
         self.add_model.add(name, description, bussiness_code)
         print('data from excel ', name, description, bussiness_code)
