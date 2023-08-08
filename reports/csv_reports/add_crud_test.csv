@@ -1,0 +1,76 @@
+Test_name,Test_case,Result,Duration,message,Browser_Name,Browser_Version,Platform_name,Python_Version,Screen_Size,Url
+Test_Add,test_01_login,passed,21.42s,,Chrome,115.0.5790.110,linux,3.10.12,1050 * 702,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
+Test_Add,test_02_add_by_ddt_method_1___Sample_1____New_sample_added____8838AA__,failed,11.83s,"selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//strong[normalize-space()='Success']""}
+  (Session info: chrome=115.0.5790.110)
+Stacktrace:
+#0 0x55b54ca664e3 <unknown>
+#1 0x55b54c795c76 <unknown>
+#2 0x55b54c7d1c96 <unknown>
+#3 0x55b54c7d1dc1 <unknown>
+#4 0x55b54c80b7f4 <unknown>
+#5 0x55b54c7f103d <unknown>
+#6 0x55b54c80930e <unknown>
+#7 0x55b54c7f0de3 <unknown>
+#8 0x55b54c7c62dd <unknown>
+#9 0x55b54c7c734e <unknown>
+#10 0x55b54ca263e4 <unknown>
+#11 0x55b54ca2a3d7 <unknown>
+#12 0x55b54ca34b20 <unknown>
+#13 0x55b54ca2b023 <unknown>
+#14 0x55b54c9f91aa <unknown>
+#15 0x55b54ca4f6b8 <unknown>
+#16 0x55b54ca4f847 <unknown>
+#17 0x55b54ca5f243 <unknown>
+#18 0x7f54bec94b43 <unknown>",Chrome,115.0.5790.110,linux,3.10.12,1050 * 702,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
+Test_Add,test_02_add_by_ddt_method_2___Sample_2____New_sample_added2____8838AA2__,failed,1.16s,"selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button _ngcontent-ng-c602641385="""" type=""button"" class=""btn btn-dark btn-sm"">...</button> is not clickable at point (32, 119). Other element would receive the click: <mdb-modal-container class=""left modal fade show"" style=""display: block;"">...</mdb-modal-container>
+  (Session info: chrome=115.0.5790.110)
+Stacktrace:
+#0 0x55b54ca664e3 <unknown>
+#1 0x55b54c795c76 <unknown>
+#2 0x55b54c7d79d4 <unknown>
+#3 0x55b54c7d5cbd <unknown>
+#4 0x55b54c7d3d2e <unknown>
+#5 0x55b54c7d310f <unknown>
+#6 0x55b54c7c81da <unknown>
+#7 0x55b54c7f1012 <unknown>
+#8 0x55b54c7c7b03 <unknown>
+#9 0x55b54c7f11de <unknown>
+#10 0x55b54c80930e <unknown>
+#11 0x55b54c7f0de3 <unknown>
+#12 0x55b54c7c62dd <unknown>
+#13 0x55b54c7c734e <unknown>
+#14 0x55b54ca263e4 <unknown>
+#15 0x55b54ca2a3d7 <unknown>
+#16 0x55b54ca34b20 <unknown>
+#17 0x55b54ca2b023 <unknown>
+#18 0x55b54c9f91aa <unknown>
+#19 0x55b54ca4f6b8 <unknown>
+#20 0x55b54ca4f847 <unknown>
+#21 0x55b54ca5f243 <unknown>
+#22 0x7f54bec94b43 <unknown>",Chrome,115.0.5790.110,linux,3.10.12,1050 * 702,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
+Test_Add,test_02_add_by_ddt_method_3___Sample_3____New_sample_added3____8838AA3__,failed,1.11s,"selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button _ngcontent-ng-c602641385="""" type=""button"" class=""btn btn-dark btn-sm"">...</button> is not clickable at point (32, 119). Other element would receive the click: <mdb-modal-container class=""left modal fade show"" style=""display: block;"">...</mdb-modal-container>
+  (Session info: chrome=115.0.5790.110)
+Stacktrace:
+#0 0x55b54ca664e3 <unknown>
+#1 0x55b54c795c76 <unknown>
+#2 0x55b54c7d79d4 <unknown>
+#3 0x55b54c7d5cbd <unknown>
+#4 0x55b54c7d3d2e <unknown>
+#5 0x55b54c7d310f <unknown>
+#6 0x55b54c7c81da <unknown>
+#7 0x55b54c7f1012 <unknown>
+#8 0x55b54c7c7b03 <unknown>
+#9 0x55b54c7f11de <unknown>
+#10 0x55b54c80930e <unknown>
+#11 0x55b54c7f0de3 <unknown>
+#12 0x55b54c7c62dd <unknown>
+#13 0x55b54c7c734e <unknown>
+#14 0x55b54ca263e4 <unknown>
+#15 0x55b54ca2a3d7 <unknown>
+#16 0x55b54ca34b20 <unknown>
+#17 0x55b54ca2b023 <unknown>
+#18 0x55b54c9f91aa <unknown>
+#19 0x55b54ca4f6b8 <unknown>
+#20 0x55b54ca4f847 <unknown>
+#21 0x55b54ca5f243 <unknown>
+#22 0x7f54bec94b43 <unknown>",Chrome,115.0.5790.110,linux,3.10.12,1050 * 702,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
