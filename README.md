@@ -8,7 +8,7 @@ How to Run this code::
 3) Click Settings --> click project: Html_report_making --> then Python Interpreter,
    click '+' symbol to install required packages.
    
-4) Don't forget to install pytest-html
+4) Don't forget to install important Packages pytest-html, pytest-csv, pytest-excel
 
 5) Open Terminal to run code
 

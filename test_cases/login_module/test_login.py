@@ -1,36 +1,28 @@
 import time
 import pytest
+import unittest
+
+from ddt import data, unpack, ddt, file_data
+from utilities.utilities import utils
+
 from pages.login_page import LoginPage
 from pages.home_page import HomePage
 
+ul = utils()
+
 
 @pytest.mark.usefixtures("setup")
-class Test_Credential:
+@ddt
+class Test_Credential(unittest.TestCase):
 
     @pytest.fixture(autouse=True)
     def class_setup(self):
         self.lp = LoginPage(self.driver)
         self.hp = HomePage(self.driver)
 
-    def test_01_invalid_username(self):
-        self.lp.login("test@gmail.com", "*Welcome&Tech2022")
+    @data(
+        *ul.read_data_from_excel("../../test_data/login_data.xlsx", 'Sheet1'))
+    @unpack
+    def test_login(self, user_name, password):
+        self.lp.login(user_name, password)
         self.lp.check_login()
-
-    def test_02_invalid_password(self):
-        self.lp.login("robyn.hills@sematree.com", "*Welcome&Tech2021")
-        self.lp.check_login()
-
-    def test_03_invalid_username_and_password(self):
-        self.lp.login("test@gmail.com", "*Welcome&Tech2021")
-        self.lp.check_login()
-
-    def test_04_valid_username_and_password(self, capsys):
-        self.lp.login("robyn.hills@sematree.com", "*Welcome&Tech2022")
-        self.lp.check_login()
-        captured = capsys.readouterr()
-        time.sleep(5)
-
-
-
-
-
