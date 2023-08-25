@@ -4,11 +4,13 @@ body {
   /* do not increase min-width as some may use split screens */
   min-width: 800px;
   color: black;
+  background-color: #F9F6EE
 }
 
 h1 {
   font-size: 24px;
-  color: black;
+  color: #0096FF
+;
 }
 
 h2 {
@@ -44,6 +46,7 @@ table {
 span.passed,
 .passed .col-result {
   color: green;
+  font-weight: bold;
 }
 
 span.skipped,
@@ -52,7 +55,9 @@ span.rerun,
 .skipped .col-result,
 .xfailed .col-result,
 .rerun .col-result {
-  color: orange;
+  color:#7F00FF;
+  font-weight: bold;
+
 }
 
 span.error,
@@ -61,7 +66,8 @@ span.xpassed,
 .error .col-result,
 .failed .col-result,
 .xpassed .col-result {
-  color: red;
+  color: #ED2939;
+  font-weight: bold;
 }
 
 /******************************
@@ -80,6 +86,7 @@ span.xpassed,
   color: black;
   font-size: 12px;
   width: 100%;
+  font-weight: 400;
 }
 #results-table th,
 #results-table td {
@@ -141,14 +148,16 @@ div.video video {
 
 .expander::after {
   content: " (show details)";
-  color: #475742;
+  color:   #0818A8;
+  font-weight: bold;
   font-style: italic;
   cursor: pointer;
 }
 
 .collapser::after {
   content: " (hide details)";
-  color: #475742;
+  color:  #0818A8;
+  font-weight: bold;
   font-style: italic;
   cursor: pointer;
 }
@@ -183,5 +192,22 @@ div.video video {
   /*finish triangle*/
   border-top: 8px solid black;
 }
+
+a[href="javascript:showAllExtras()"]
+{
+    color: #0818A8;
+    font-weight: bold;
+    padding: 4px
+
+}
+
+a[href="javascript:hideAllExtras()"]
+{
+   color: #0818A8;
+   font-weight: bold;
+   padding: 4px
+}
+
+
 
 
