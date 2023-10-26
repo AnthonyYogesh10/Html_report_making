@@ -166,7 +166,7 @@ class HomePage:
     #     for sample_name in list_of_samples:
     #         if name == sample_name.text.strip(): # strip method is used to remove extra space from the string
     #             sample_name.click()
-    #             time.sleep(3)
+    #             time.sleep(3) test git
 
     def navigate_to(self, navigate_to, administration, category):
         self.select_side_nav(navigate_to)
