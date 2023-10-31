@@ -1,11 +1,58 @@
 Test_name,Test_case,Result,Duration,message,Browser_Name,Browser_Version,Platform_name,Python_Version,Screen_Size,Url
-Test_AllCrud,test_01_test_login_1___test_gmail_com_____Welcome_Tech2022__,passed,7.90s,,Chrome,115.0.5790.110,linux,3.10.12,1050 * 702,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
-Test_AllCrud,test_01_test_login_2___robyn_hills_sematree_com_____Welcome_Tech2021__,passed,7.80s,,Chrome,115.0.5790.110,linux,3.10.12,1050 * 702,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
-Test_AllCrud,test_01_test_login_3___test_gmail_com_____Welcome_Tech2021__,passed,7.77s,,Chrome,115.0.5790.110,linux,3.10.12,1050 * 702,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
-Test_AllCrud,test_01_test_login_4___robyn_hills_sematree_com_____Welcome_Tech2022__,passed,8.75s,,Chrome,115.0.5790.110,linux,3.10.12,1050 * 702,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
-Test_AllCrud,test_02_navigate,passed,12.83s,,Chrome,115.0.5790.110,linux,3.10.12,1050 * 702,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
-Test_AllCrud,test_03_add,passed,11.88s,,Chrome,115.0.5790.110,linux,3.10.12,1050 * 702,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
-Test_AllCrud,test_04_search,passed,8.40s,,Chrome,115.0.5790.110,linux,3.10.12,1050 * 702,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
-Test_AllCrud,test_05_modify,passed,11.89s,,Chrome,115.0.5790.110,linux,3.10.12,1050 * 702,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
-Test_AllCrud,test_06_delete,passed,8.32s,,Chrome,115.0.5790.110,linux,3.10.12,1050 * 702,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
-Test_AllCrud,test_7_search,passed,20.55s,,Chrome,115.0.5790.110,linux,3.10.12,1050 * 702,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
+Test_AllCrud,test_01_test_login_1___test_gmail_com_____Welcome_Tech2022__,passed,7.93s,,Chrome,117.0.5938.92,linux,3.10.12,1050 * 731,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
+Test_AllCrud,test_01_test_login_2___robyn_hills_sematree_com_____Welcome_Tech2021__,passed,7.87s,,Chrome,117.0.5938.92,linux,3.10.12,1050 * 731,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
+Test_AllCrud,test_01_test_login_3___test_gmail_com_____Welcome_Tech2021__,passed,7.81s,,Chrome,117.0.5938.92,linux,3.10.12,1050 * 731,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
+Test_AllCrud,test_01_test_login_4___robyn_hills_sematree_com_____Welcome_Tech2022__,passed,9.40s,,Chrome,117.0.5938.92,linux,3.10.12,1050 * 731,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
+Test_AllCrud,test_02_navigate,passed,12.47s,,Chrome,117.0.5938.92,linux,3.10.12,1050 * 731,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
+Test_AllCrud,test_03_add,failed,1.12s,"selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button _ngcontent-ng-c1746199913="""" type=""button"" id=""dropdownMenuButton"" aria-expanded=""false"" mdbdropdowntoggle="""" class=""btn btn-primary dropdown-toggle ng-tns-c252668284-10"">...</button> is not clickable at point (32, 119). Other element would receive the click: <img _ngcontent-ng-c3719313049="""" src=""assets/imgs/TruTesta/TruSamples_Icon.png"" width=""77%"" class=""img-fluid flex-center"">
+  (Session info: chrome=117.0.5938.92)
+Stacktrace:
+#0 0x55f3047ffc83 <unknown>
+#1 0x55f3044ecd27 <unknown>
+#2 0x55f30453928d <unknown>
+#3 0x55f30453762d <unknown>
+#4 0x55f3045353e8 <unknown>
+#5 0x55f304534457 <unknown>
+#6 0x55f3045291f9 <unknown>
+#7 0x55f3045548a2 <unknown>
+#8 0x55f304528c08 <unknown>
+#9 0x55f304554a6e <unknown>
+#10 0x55f30456d98c <unknown>
+#11 0x55f304554673 <unknown>
+#12 0x55f304527642 <unknown>
+#13 0x55f30452842e <unknown>
+#14 0x55f3047c8d0d <unknown>
+#15 0x55f3047cce14 <unknown>
+#16 0x55f3047d60d8 <unknown>
+#17 0x55f3047cd630 <unknown>
+#18 0x55f30479d77e <unknown>
+#19 0x55f3047ee878 <unknown>
+#20 0x55f3047eea74 <unknown>
+#21 0x55f3047feda8 <unknown>
+#22 0x7f14da054b43 <unknown>",Chrome,117.0.5938.92,linux,3.10.12,1050 * 731,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab
+Test_AllCrud,test_04_search,failed,6.45s,"selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <i _ngcontent-ng-c572247695="""" class=""fa fa-search""></i> is not clickable at point (1340, 74). Other element would receive the click: <div class=""sidenav-backdrop ng-star-inserted"" style=""transition: opacity 0.3s ease-out 0s; position: fixed; width: 100vw; height: 100vh; opacity: 1;""></div>
+  (Session info: chrome=117.0.5938.92)
+Stacktrace:
+#0 0x55f3047ffc83 <unknown>
+#1 0x55f3044ecd27 <unknown>
+#2 0x55f30453928d <unknown>
+#3 0x55f30453762d <unknown>
+#4 0x55f3045353e8 <unknown>
+#5 0x55f304534457 <unknown>
+#6 0x55f3045291f9 <unknown>
+#7 0x55f3045548a2 <unknown>
+#8 0x55f304528c08 <unknown>
+#9 0x55f304554a6e <unknown>
+#10 0x55f30456d98c <unknown>
+#11 0x55f304554673 <unknown>
+#12 0x55f304527642 <unknown>
+#13 0x55f30452842e <unknown>
+#14 0x55f3047c8d0d <unknown>
+#15 0x55f3047cce14 <unknown>
+#16 0x55f3047d60d8 <unknown>
+#17 0x55f3047cd630 <unknown>
+#18 0x55f30479d77e <unknown>
+#19 0x55f3047ee878 <unknown>
+#20 0x55f3047eea74 <unknown>
+#21 0x55f3047feda8 <unknown>
+#22 0x7f14da054b43 <unknown>",Chrome,117.0.5938.92,linux,3.10.12,1050 * 731,https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab

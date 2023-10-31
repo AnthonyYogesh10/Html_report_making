@@ -17,21 +17,40 @@ class HomePage:
 
     # Locators (it is used to change url easily and essy to maintain)
     menubar_field = "//i[@class='fas fa-bars fa-2x']"
+
     side_nav_options_field = "//ul[@id='scroll-container']/mdb-sidenav-item/li/div/a"
     side_nav_admin_drdw_field = "//ul[@class='sidenav-collapse collapse show']/li"
     under_categories_field = "//mdb-sidenav-item[@class='ng-star-inserted']//li[@class='sidenav-item']/div/a"
+
     add_button_field = "//button[normalize-space()='Add']"
     modify_btn_field = "//button[normalize-space()='Modify']"
+
     delete_btn_field = "//button[normalize-space()='Delete']"
     search_input_field = "//input[@id='quick-search']"
     search_button_field = "//i[@class='fa fa-search']"
+
     show_btn_field = "//td[@id='list-table-left-column-top']//table//tr/td/div/button"
     per_page_list_field = "//body/div/div[@class ='cdk-overlay-connected-position-bounding-box']/div/div/ul/li"
+
     data_box_field = "//div[@id='mid-list']"
     data_list_field = "//div[@id='mid-list']/a"
+
     page_numbers_field = "//ul[@class='pagination pagination-sm justify-content-center']/li"
     next_page_field = "//a[normalize-space()='>']"
+
     sample_names_field = "//*[@id = 'mid-list']/a/div[1]"
+
+    facility_btn_field = "//button[contains(text(),'Facility')]"
+    facility_all_value = "//a[normalize-space()='All']"
+
+    document_field = "//span[normalize-space()='Documents']"
+    add_document_field = "//button[normalize-space()='Add Documents']"
+
+    tag_input_field = "//ng-select[@name='documentTags']//span[@class='ng-arrow-wrapper']"
+    tag_value_field = "//div[@class='ng-dropdown-panel-items scroll-host']/div[2]/div[1]"
+
+    file_upload_field = "//li[1]//label[1]/div"
+    file_input = "//li[1]//label[1]/div/input"
 
     # Loactors to Use (It is used to avoid store variables
     #                 eg: name = xpath
@@ -160,6 +179,40 @@ class HomePage:
                 options.click()
                 self.log.info(f"Click on {data_per_page}")
         time.sleep(5)
+
+    def select_facility_all_value_btn(self):
+        self.driver.find_element(By.XPATH, self.facility_btn_field).click()
+        time.sleep(2)
+        self.driver.find_element(By.XPATH, self.facility_all_value).click()
+        time.sleep(2)
+
+    def click_document_btn(self):
+        self.driver.find_element(By.XPATH, self.document_field).click()
+        time.sleep(4)
+
+    def click_add_document_btn(self):
+        self.driver.find_element(By.XPATH, self.add_document_field).click()
+        time.sleep(5)
+
+    def select_tag_filed_values(self):
+        self.driver.find_element(By.XPATH, self.tag_input_field).click()
+        time.sleep(4)
+        self.driver.find_element(By.XPATH, self.tag_value_field).click()
+        time.sleep(4)
+
+    def outside_click(self):
+        self.driver.find_element(By.XPATH, "//form[@role='form']//div[@class='modal-header']").click()
+        time.sleep(5)
+
+    def upload_data(self, file_path_of_upload_file):
+        # self.driver.find_element(By.XPATH, self.file_upload_field).click()
+        # time.sleep(5)
+        self.driver.find_element(By.XPATH, self.file_input).send_keys(file_path_of_upload_file)
+        time.sleep(5)
+        add_btn = self.driver.find_element(By.XPATH, "//button[@class='btn btn-sm btn-primary text-white']")
+        add_btn.click()
+        time.sleep(5)
+
 
     # def samples_names(self, name):
     #     list_of_samples = self.get_sample_names()

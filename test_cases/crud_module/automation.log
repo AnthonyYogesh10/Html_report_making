@@ -1,25 +1,5 @@
-08-Aug-23 19:56:42 LoginPage INFO:Assign robyn.hills@sematree.com into username
-08-Aug-23 19:56:42 LoginPage INFO:Assign *Welcome&Tech2022 into password
-08-Aug-23 19:56:43 LoginPage INFO:Click on login button
-08-Aug-23 19:56:51 HomePage INFO:Click on menubar
-08-Aug-23 19:56:54 HomePage INFO:Click on side_nav
-08-Aug-23 19:56:57 HomePage INFO:Click on administration
-08-Aug-23 19:57:00 HomePage INFO:Click on category
-08-Aug-23 19:57:08 HomePage INFO:Click on add button
-08-Aug-23 19:57:11 Add_model INFO:Assign Sample_1 into name
-08-Aug-23 19:57:11 Add_model INFO:Assign New sample added into description
-08-Aug-23 19:57:11 Add_model INFO:Assign 8838AA into bussiness code
-08-Aug-23 19:57:15 Add_model INFO:Click on submit button
-08-Aug-23 19:57:20 Add_model INFO:testcase add passed
-08-Aug-23 19:57:24 HomePage INFO:Click on add button
-08-Aug-23 19:57:27 Add_model INFO:Assign Sample_2 into name
-08-Aug-23 19:57:27 Add_model INFO:Assign New sample added2 into description
-08-Aug-23 19:57:27 Add_model INFO:Assign 8838AA2 into bussiness code
-08-Aug-23 19:57:31 Add_model INFO:Click on submit button
-08-Aug-23 19:57:36 Add_model INFO:testcase add passed
-08-Aug-23 19:57:40 HomePage INFO:Click on add button
-08-Aug-23 19:57:43 Add_model INFO:Assign Sample_3 into name
-08-Aug-23 19:57:43 Add_model INFO:Assign New sample added3 into description
-08-Aug-23 19:57:43 Add_model INFO:Assign 8838AA3 into bussiness code
-08-Aug-23 19:57:47 Add_model INFO:Click on submit button
-08-Aug-23 19:57:52 Add_model INFO:testcase add passed
+31-Oct-23 18:44:40 LoginPage INFO:Assign robyn.hills@sematree.com into username
+31-Oct-23 18:44:40 LoginPage INFO:Assign *Welcome&Tech2022 into password
+31-Oct-23 18:44:41 LoginPage INFO:Click on login button
+31-Oct-23 18:44:49 HomePage INFO:Click on menubar
+31-Oct-23 18:44:52 HomePage INFO:Click on side_nav

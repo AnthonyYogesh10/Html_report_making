@@ -3,7 +3,412 @@
   <head>
     <meta charset="utf-8"/>
     <title>Truetesta Sample Tracker Report</title>
-    <link href="assets/style.css" rel="stylesheet" type="text/css"/></head>
+    <style>body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  /* do not increase min-width as some may use split screens */
+  min-width: 800px;
+  color: #999;
+}
+
+h1 {
+  font-size: 24px;
+  color: black;
+}
+
+h2 {
+  font-size: 16px;
+  color: black;
+}
+
+p {
+  color: black;
+}
+
+a {
+  color: #999;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+/******************************
+ * SUMMARY INFORMATION
+ ******************************/
+#environment td {
+  padding: 5px;
+  border: 1px solid #E6E6E6;
+}
+#environment tr:nth-child(odd) {
+  background-color: #f6f6f6;
+}
+
+/******************************
+ * TEST RESULT COLORS
+ ******************************/
+span.passed,
+.passed .col-result {
+  color: green;
+}
+
+span.skipped,
+span.xfailed,
+span.rerun,
+.skipped .col-result,
+.xfailed .col-result,
+.rerun .col-result {
+  color: orange;
+}
+
+span.error,
+span.failed,
+span.xpassed,
+.error .col-result,
+.failed .col-result,
+.xpassed .col-result {
+  color: red;
+}
+
+/******************************
+ * RESULTS TABLE
+ *
+ * 1. Table Layout
+ * 2. Extra
+ * 3. Sorting items
+ *
+ ******************************/
+/*------------------
+ * 1. Table Layout
+ *------------------*/
+#results-table {
+  border: 1px solid #e6e6e6;
+  color: #999;
+  font-size: 12px;
+  width: 100%;
+}
+#results-table th,
+#results-table td {
+  padding: 5px;
+  border: 1px solid #E6E6E6;
+  text-align: left;
+}
+#results-table th {
+  font-weight: bold;
+}
+
+/*------------------
+ * 2. Extra
+ *------------------*/
+.log {
+  background-color: #e6e6e6;
+  border: 1px solid #e6e6e6;
+  color: black;
+  display: block;
+  font-family: "Courier New", Courier, monospace;
+  height: 230px;
+  overflow-y: scroll;
+  padding: 5px;
+  white-space: pre-wrap;
+}
+.log:only-child {
+  height: inherit;
+}
+
+div.image {
+  border: 1px solid #e6e6e6;
+  float: right;
+  height: 240px;
+  margin-left: 5px;
+  overflow: hidden;
+  width: 320px;
+}
+div.image img {
+  width: 320px;
+}
+
+div.video {
+  border: 1px solid #e6e6e6;
+  float: right;
+  height: 240px;
+  margin-left: 5px;
+  overflow: hidden;
+  width: 320px;
+}
+div.video video {
+  overflow: hidden;
+  width: 320px;
+  height: 240px;
+}
+
+.collapsed {
+  display: none;
+}
+
+.expander::after {
+  content: " (show details)";
+  color: #BBB;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.collapser::after {
+  content: " (hide details)";
+  color: #BBB;
+  font-style: italic;
+  cursor: pointer;
+}
+
+/*------------------
+ * 3. Sorting items
+ *------------------*/
+.sortable {
+  cursor: pointer;
+}
+
+.sort-icon {
+  font-size: 0px;
+  float: left;
+  margin-right: 5px;
+  margin-top: 5px;
+  /*triangle*/
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+.inactive .sort-icon {
+  /*finish triangle*/
+  border-top: 8px solid #E6E6E6;
+}
+.asc.active .sort-icon {
+  /*finish triangle*/
+  border-bottom: 8px solid #999;
+}
+.desc.active .sort-icon {
+  /*finish triangle*/
+  border-top: 8px solid #999;
+}
+
+/******************************
+ * CUSTOM CSS
+ * ../../utilities/style.css
+ ******************************/
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  /* do not increase min-width as some may use split screens */
+  min-width: 800px;
+  color: black;
+  background-color: #F9F6EE
+}
+
+h1 {
+  font-size: 24px;
+  color: #0096FF
+;
+}
+
+h2 {
+  font-size: 16px;
+  color: black;
+}
+
+p {
+  color: black;
+}
+a {
+  color: black;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+/******************************
+ * SUMMARY INFORMATION
+ ******************************/
+#environment td {
+  padding: 5px;
+  border: 1px solid #E6E6E6;
+}
+#environment tr:nth-child(odd) {
+  background-color: #f6f6f6;
+}
+
+/******************************
+ * TEST RESULT COLORS
+ ******************************/
+span.passed,
+.passed .col-result {
+  color: green;
+  font-weight: bold;
+}
+
+span.skipped,
+span.xfailed,
+span.rerun,
+.skipped .col-result,
+.xfailed .col-result,
+.rerun .col-result {
+  color:#7F00FF;
+  font-weight: bold;
+
+}
+
+span.error,
+span.failed,
+span.xpassed,
+.error .col-result,
+.failed .col-result,
+.xpassed .col-result {
+  color: #ED2939;
+  font-weight: bold;
+}
+
+/******************************
+ * RESULTS TABLE
+ *
+ * 1. Table Layout
+ * 2. Extra
+ * 3. Sorting items
+ *
+ ******************************/
+/*------------------
+ * 1. Table Layout
+ *------------------*/
+#results-table {
+  border: 1px solid #e6e6e6;
+  color: black;
+  font-size: 12px;
+  width: 100%;
+  font-weight: 400;
+}
+#results-table th,
+#results-table td {
+  padding: 5px;
+  border: 1px solid #E6E6E6;
+  text-align: left;
+}
+#results-table th {
+  font-weight: bold;
+}
+
+/*------------------
+ * 2. Extra
+ *------------------*/
+.log {
+  background-color: #e6e6e6;
+  border: 1px solid #e6e6e6;
+  color: black;
+  display: block;
+  font-family: "Courier New", Courier, monospace;
+  height: 230px;
+  overflow-y: scroll;
+  padding: 5px;
+  white-space: pre-wrap;
+}
+.log:only-child {
+  height: inherit;
+}
+
+div.image {
+  border: 1px solid #e6e6e6;
+  float: right;
+  height: 240px;
+  margin-left: 5px;
+  overflow: hidden;
+  width: 320px;
+}
+div.image img {
+  width: 320px;
+}
+
+div.video {
+  border: 1px solid #e6e6e6;
+  float: right;
+  height: 240px;
+  margin-left: 5px;
+  overflow: hidden;
+  width: 320px;
+}
+div.video video {
+  overflow: hidden;
+  width: 320px;
+  height: 240px;
+}
+
+.collapsed {
+  display: none;
+}
+
+.expander::after {
+  content: " (show details)";
+  color:   #0818A8;
+  font-weight: bold;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.collapser::after {
+  content: " (hide details)";
+  color:  #0818A8;
+  font-weight: bold;
+  font-style: italic;
+  cursor: pointer;
+}
+
+/*------------------
+ * 3. Sorting items
+ *------------------*/
+.sortable {
+  cursor: pointer;
+}
+
+.sort-icon {
+  font-size: 0px;
+  float: left;
+  margin-right: 5px;
+  margin-top: 5px;
+  /*triangle*/
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+.inactive .sort-icon {
+  /*finish triangle*/
+  border-top: 8px solid #E6E6E6;
+}
+.asc.active .sort-icon {
+  /*finish triangle*/
+  border-bottom: 8px solid black;
+}
+.desc.active .sort-icon {
+  /*finish triangle*/
+  border-top: 8px solid black;
+}
+
+a[href="javascript:showAllExtras()"]
+{
+    color: #0818A8;
+    font-weight: bold;
+    padding: 4px
+
+}
+
+a[href="javascript:hideAllExtras()"]
+{
+   color: #0818A8;
+   font-weight: bold;
+   padding: 4px
+}
+
+
+
+
+</style></head>
   <body onLoad="init()">
     <script>/* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -253,7 +658,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>Truetesta Sample Tracker Report</h1>
-    <p>Report generated on 08-Aug-2023 at 19:52:47 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
+    <p>Report generated on 25-Sep-2023 at 19:40:52 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -261,10 +666,10 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Chrome</td></tr>
       <tr>
         <td>Browser screen size</td>
-        <td>1050 * 702</td></tr>
+        <td>1050 * 731</td></tr>
       <tr>
         <td>Browser version</td>
-        <td>115.0.5790.110</td></tr>
+        <td>117.0.5938.92</td></tr>
       <tr>
         <td>Platform name</td>
         <td>linux</td></tr>
@@ -272,8 +677,8 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Python version</td>
         <td>3.10.12</td></tr></table>
     <h2>Summary</h2>
-    <p>10 tests ran in 177.64 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">10 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>8 tests ran in 122.44 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">6 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">2 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -290,209 +695,155 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <th>Screen Size</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="10">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td>6</td>
+          <td class="col-time">2023-09-25 19:40:52</td>
+          <td>Test_AllCrud</td>
+          <td>test_03_add</td>
+          <td class="col-result">Failed</td>
+          <td class="col-time">1.12s</td>
+          <td><a href="https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab" target="_blank">URL</a></td>
+          <td>Chrome</td>
+          <td>117.0.5938.92</td>
+          <td>1050 * 731</td></tr>
+        <tr>
+          <td class="extra" colspan="10">
+            <div><div><img src="screenshots/Test_AllCrud/2023-09-25 19:40:25.png" alt="screenshot" style="width:300px;height:200px" onclick="window.open(this.src)" align="right"/></div></div>
+            <div class="log">self = &lt;test_allCrud_operation.Test_AllCrud testMethod=test_03_add&gt;<br/><br/>    def test_03_add(self):<br/>&gt;       self.hp.click_add_button()<br/><br/>test_allCrud_operation.py:42: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>../../pages/home_page.py:125: in click_add_button<br/>    self.get_add_button_field().click()<br/>../../venu/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py:94: in click<br/>    self._execute(Command.CLICK_ELEMENT)<br/>../../venu/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py:404: in _execute<br/>    return self._parent.execute(command, params)<br/>../../venu/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:440: in execute<br/>    self.error_handler.check_response(response)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f71bf8fc250&gt;<br/>response = {&#x27;status&#x27;: 400, &#x27;value&#x27;: &#x27;{&quot;value&quot;:{&quot;error&quot;:&quot;element click intercepted&quot;,&quot;message&quot;:&quot;element click intercepted: Element ...\\n#20 0x55f3047eea74 \\u003Cunknown&gt;\\n#21 0x55f3047feda8 \\u003Cunknown&gt;\\n#22 0x7f14da054b43 \\u003Cunknown&gt;\\n&quot;}}&#x27;}<br/><br/>    def check_response(self, response: Dict[str, Any]) -&gt; None:<br/>        &quot;&quot;&quot;Checks that a JSON response from the WebDriver does not have an<br/>        error.<br/>    <br/>        :Args:<br/>         - response - The JSON response from the WebDriver server as a dictionary<br/>           object.<br/>    <br/>        :Raises: If the response contains an error message.<br/>        &quot;&quot;&quot;<br/>        status = response.get(&quot;status&quot;, None)<br/>        if not status or status == ErrorCode.SUCCESS:<br/>            return<br/>        value = None<br/>        message = response.get(&quot;message&quot;, &quot;&quot;)<br/>        screen: str = response.get(&quot;screen&quot;, &quot;&quot;)<br/>        stacktrace = None<br/>        if isinstance(status, int):<br/>            value_json = response.get(&quot;value&quot;, None)<br/>            if value_json and isinstance(value_json, str):<br/>                import json<br/>    <br/>                try:<br/>                    value = json.loads(value_json)<br/>                    if len(value) == 1:<br/>                        value = value[&quot;value&quot;]<br/>                    status = value.get(&quot;error&quot;, None)<br/>                    if not status:<br/>                        status = value.get(&quot;status&quot;, ErrorCode.UNKNOWN_ERROR)<br/>                        message = value.get(&quot;value&quot;) or value.get(&quot;message&quot;)<br/>                        if not isinstance(message, str):<br/>                            value = message<br/>                            message = message.get(&quot;message&quot;)<br/>                    else:<br/>                        message = value.get(&quot;message&quot;, None)<br/>                except ValueError:<br/>                    pass<br/>    <br/>        exception_class: Type[WebDriverException]<br/>        if status in ErrorCode.NO_SUCH_ELEMENT:<br/>            exception_class = NoSuchElementException<br/>        elif status in ErrorCode.NO_SUCH_FRAME:<br/>            exception_class = NoSuchFrameException<br/>        elif status in ErrorCode.NO_SUCH_SHADOW_ROOT:<br/>            exception_class = NoSuchShadowRootException<br/>        elif status in ErrorCode.NO_SUCH_WINDOW:<br/>            exception_class = NoSuchWindowException<br/>        elif status in ErrorCode.STALE_ELEMENT_REFERENCE:<br/>            exception_class = StaleElementReferenceException<br/>        elif status in ErrorCode.ELEMENT_NOT_VISIBLE:<br/>            exception_class = ElementNotVisibleException<br/>        elif status in ErrorCode.INVALID_ELEMENT_STATE:<br/>            exception_class = InvalidElementStateException<br/>        elif (<br/>            status in ErrorCode.INVALID_SELECTOR<br/>            or status in ErrorCode.INVALID_XPATH_SELECTOR<br/>            or status in ErrorCode.INVALID_XPATH_SELECTOR_RETURN_TYPER<br/>        ):<br/>            exception_class = InvalidSelectorException<br/>        elif status in ErrorCode.ELEMENT_IS_NOT_SELECTABLE:<br/>            exception_class = ElementNotSelectableException<br/>        elif status in ErrorCode.ELEMENT_NOT_INTERACTABLE:<br/>            exception_class = ElementNotInteractableException<br/>        elif status in ErrorCode.INVALID_COOKIE_DOMAIN:<br/>            exception_class = InvalidCookieDomainException<br/>        elif status in ErrorCode.UNABLE_TO_SET_COOKIE:<br/>            exception_class = UnableToSetCookieException<br/>        elif status in ErrorCode.TIMEOUT:<br/>            exception_class = TimeoutException<br/>        elif status in ErrorCode.SCRIPT_TIMEOUT:<br/>            exception_class = TimeoutException<br/>        elif status in ErrorCode.UNKNOWN_ERROR:<br/>            exception_class = WebDriverException<br/>        elif status in ErrorCode.UNEXPECTED_ALERT_OPEN:<br/>            exception_class = UnexpectedAlertPresentException<br/>        elif status in ErrorCode.NO_ALERT_OPEN:<br/>            exception_class = NoAlertPresentException<br/>        elif status in ErrorCode.IME_NOT_AVAILABLE:<br/>            exception_class = ImeNotAvailableException<br/>        elif status in ErrorCode.IME_ENGINE_ACTIVATION_FAILED:<br/>            exception_class = ImeActivationFailedException<br/>        elif status in ErrorCode.MOVE_TARGET_OUT_OF_BOUNDS:<br/>            exception_class = MoveTargetOutOfBoundsException<br/>        elif status in ErrorCode.JAVASCRIPT_ERROR:<br/>            exception_class = JavascriptException<br/>        elif status in ErrorCode.SESSION_NOT_CREATED:<br/>            exception_class = SessionNotCreatedException<br/>        elif status in ErrorCode.INVALID_ARGUMENT:<br/>            exception_class = InvalidArgumentException<br/>        elif status in ErrorCode.NO_SUCH_COOKIE:<br/>            exception_class = NoSuchCookieException<br/>        elif status in ErrorCode.UNABLE_TO_CAPTURE_SCREEN:<br/>            exception_class = ScreenshotException<br/>        elif status in ErrorCode.ELEMENT_CLICK_INTERCEPTED:<br/>            exception_class = ElementClickInterceptedException<br/>        elif status in ErrorCode.INSECURE_CERTIFICATE:<br/>            exception_class = InsecureCertificateException<br/>        elif status in ErrorCode.INVALID_COORDINATES:<br/>            exception_class = InvalidCoordinatesException<br/>        elif status in ErrorCode.INVALID_SESSION_ID:<br/>            exception_class = InvalidSessionIdException<br/>        elif status in ErrorCode.UNKNOWN_METHOD:<br/>            exception_class = UnknownMethodException<br/>        else:<br/>            exception_class = WebDriverException<br/>        if not value:<br/>            value = response[&quot;value&quot;]<br/>        if isinstance(value, str):<br/>            raise exception_class(value)<br/>        if message == &quot;&quot; and &quot;message&quot; in value:<br/>            message = value[&quot;message&quot;]<br/>    <br/>        screen = None  # type: ignore[assignment]<br/>        if &quot;screen&quot; in value:<br/>            screen = value[&quot;screen&quot;]<br/>    <br/>        stacktrace = None<br/>        st_value = value.get(&quot;stackTrace&quot;) or value.get(&quot;stacktrace&quot;)<br/>        if st_value:<br/>            if isinstance(st_value, str):<br/>                stacktrace = st_value.split(&quot;\n&quot;)<br/>            else:<br/>                stacktrace = []<br/>                try:<br/>                    for frame in st_value:<br/>                        line = frame.get(&quot;lineNumber&quot;, &quot;&quot;)<br/>                        file = frame.get(&quot;fileName&quot;, &quot;&lt;anonymous&gt;&quot;)<br/>                        if line:<br/>                            file = f&quot;{file}:{line}&quot;<br/>                        meth = frame.get(&quot;methodName&quot;, &quot;&lt;anonymous&gt;&quot;)<br/>                        if &quot;className&quot; in frame:<br/>                            meth = f&quot;{frame[&#x27;className&#x27;]}.{meth}&quot;<br/>                        msg = &quot;    at %s (%s)&quot;<br/>                        msg = msg % (meth, file)<br/>                        stacktrace.append(msg)<br/>                except TypeError:<br/>                    pass<br/>        if exception_class == UnexpectedAlertPresentException:<br/>            alert_text = None<br/>            if &quot;data&quot; in value:<br/>                alert_text = value[&quot;data&quot;].get(&quot;text&quot;)<br/>            elif &quot;alert&quot; in value:<br/>                alert_text = value[&quot;alert&quot;].get(&quot;text&quot;)<br/>            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here<br/>&gt;       raise exception_class(message, screen, stacktrace)<br/><span class="error">E       selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element &lt;button _ngcontent-ng-c1746199913=&quot;&quot; type=&quot;button&quot; id=&quot;dropdownMenuButton&quot; aria-expanded=&quot;false&quot; mdbdropdowntoggle=&quot;&quot; class=&quot;btn btn-primary dropdown-toggle ng-tns-c252668284-10&quot;&gt;...&lt;/button&gt; is not clickable at point (32, 119). Other element would receive the click: &lt;img _ngcontent-ng-c3719313049=&quot;&quot; src=&quot;assets/imgs/TruTesta/TruSamples_Icon.png&quot; width=&quot;77%&quot; class=&quot;img-fluid flex-center&quot;&gt;</span><br/><span class="error">E         (Session info: chrome=117.0.5938.92)</span><br/><span class="error">E       Stacktrace:</span><br/><span class="error">E       #0 0x55f3047ffc83 &lt;unknown&gt;</span><br/><span class="error">E       #1 0x55f3044ecd27 &lt;unknown&gt;</span><br/><span class="error">E       #2 0x55f30453928d &lt;unknown&gt;</span><br/><span class="error">E       #3 0x55f30453762d &lt;unknown&gt;</span><br/><span class="error">E       #4 0x55f3045353e8 &lt;unknown&gt;</span><br/><span class="error">E       #5 0x55f304534457 &lt;unknown&gt;</span><br/><span class="error">E       #6 0x55f3045291f9 &lt;unknown&gt;</span><br/><span class="error">E       #7 0x55f3045548a2 &lt;unknown&gt;</span><br/><span class="error">E       #8 0x55f304528c08 &lt;unknown&gt;</span><br/><span class="error">E       #9 0x55f304554a6e &lt;unknown&gt;</span><br/><span class="error">E       #10 0x55f30456d98c &lt;unknown&gt;</span><br/><span class="error">E       #11 0x55f304554673 &lt;unknown&gt;</span><br/><span class="error">E       #12 0x55f304527642 &lt;unknown&gt;</span><br/><span class="error">E       #13 0x55f30452842e &lt;unknown&gt;</span><br/><span class="error">E       #14 0x55f3047c8d0d &lt;unknown&gt;</span><br/><span class="error">E       #15 0x55f3047cce14 &lt;unknown&gt;</span><br/><span class="error">E       #16 0x55f3047d60d8 &lt;unknown&gt;</span><br/><span class="error">E       #17 0x55f3047cd630 &lt;unknown&gt;</span><br/><span class="error">E       #18 0x55f30479d77e &lt;unknown&gt;</span><br/><span class="error">E       #19 0x55f3047ee878 &lt;unknown&gt;</span><br/><span class="error">E       #20 0x55f3047eea74 &lt;unknown&gt;</span><br/><span class="error">E       #21 0x55f3047feda8 &lt;unknown&gt;</span><br/><span class="error">E       #22 0x7f14da054b43 &lt;unknown&gt;</span><br/><br/>../../venu/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py:245: ElementClickInterceptedException<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td>7</td>
+          <td class="col-time">2023-09-25 19:40:52</td>
+          <td>Test_AllCrud</td>
+          <td>test_04_search</td>
+          <td class="col-result">Failed</td>
+          <td class="col-time">6.45s</td>
+          <td><a href="https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab" target="_blank">URL</a></td>
+          <td>Chrome</td>
+          <td>117.0.5938.92</td>
+          <td>1050 * 731</td></tr>
+        <tr>
+          <td class="extra" colspan="10">
+            <div><div><img src="screenshots/Test_AllCrud/2023-09-25 19:40:36.png" alt="screenshot" style="width:300px;height:200px" onclick="window.open(this.src)" align="right"/></div></div>
+            <div class="log">self = &lt;test_allCrud_operation.Test_AllCrud testMethod=test_04_search&gt;<br/><br/>    def test_04_search(self):<br/>        self.hp.enter_search_input(&quot;new sample2&quot;)<br/>&gt;       self.hp.click_search_button()<br/><br/>test_allCrud_operation.py:48: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>../../pages/home_page.py:148: in click_search_button<br/>    self.get_search_button_field().click()<br/>../../venu/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py:94: in click<br/>    self._execute(Command.CLICK_ELEMENT)<br/>../../venu/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py:404: in _execute<br/>    return self._parent.execute(command, params)<br/>../../venu/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:440: in execute<br/>    self.error_handler.check_response(response)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f71bf8fc250&gt;<br/>response = {&#x27;status&#x27;: 400, &#x27;value&#x27;: &#x27;{&quot;value&quot;:{&quot;error&quot;:&quot;element click intercepted&quot;,&quot;message&quot;:&quot;element click intercepted: Element ...\\n#20 0x55f3047eea74 \\u003Cunknown&gt;\\n#21 0x55f3047feda8 \\u003Cunknown&gt;\\n#22 0x7f14da054b43 \\u003Cunknown&gt;\\n&quot;}}&#x27;}<br/><br/>    def check_response(self, response: Dict[str, Any]) -&gt; None:<br/>        &quot;&quot;&quot;Checks that a JSON response from the WebDriver does not have an<br/>        error.<br/>    <br/>        :Args:<br/>         - response - The JSON response from the WebDriver server as a dictionary<br/>           object.<br/>    <br/>        :Raises: If the response contains an error message.<br/>        &quot;&quot;&quot;<br/>        status = response.get(&quot;status&quot;, None)<br/>        if not status or status == ErrorCode.SUCCESS:<br/>            return<br/>        value = None<br/>        message = response.get(&quot;message&quot;, &quot;&quot;)<br/>        screen: str = response.get(&quot;screen&quot;, &quot;&quot;)<br/>        stacktrace = None<br/>        if isinstance(status, int):<br/>            value_json = response.get(&quot;value&quot;, None)<br/>            if value_json and isinstance(value_json, str):<br/>                import json<br/>    <br/>                try:<br/>                    value = json.loads(value_json)<br/>                    if len(value) == 1:<br/>                        value = value[&quot;value&quot;]<br/>                    status = value.get(&quot;error&quot;, None)<br/>                    if not status:<br/>                        status = value.get(&quot;status&quot;, ErrorCode.UNKNOWN_ERROR)<br/>                        message = value.get(&quot;value&quot;) or value.get(&quot;message&quot;)<br/>                        if not isinstance(message, str):<br/>                            value = message<br/>                            message = message.get(&quot;message&quot;)<br/>                    else:<br/>                        message = value.get(&quot;message&quot;, None)<br/>                except ValueError:<br/>                    pass<br/>    <br/>        exception_class: Type[WebDriverException]<br/>        if status in ErrorCode.NO_SUCH_ELEMENT:<br/>            exception_class = NoSuchElementException<br/>        elif status in ErrorCode.NO_SUCH_FRAME:<br/>            exception_class = NoSuchFrameException<br/>        elif status in ErrorCode.NO_SUCH_SHADOW_ROOT:<br/>            exception_class = NoSuchShadowRootException<br/>        elif status in ErrorCode.NO_SUCH_WINDOW:<br/>            exception_class = NoSuchWindowException<br/>        elif status in ErrorCode.STALE_ELEMENT_REFERENCE:<br/>            exception_class = StaleElementReferenceException<br/>        elif status in ErrorCode.ELEMENT_NOT_VISIBLE:<br/>            exception_class = ElementNotVisibleException<br/>        elif status in ErrorCode.INVALID_ELEMENT_STATE:<br/>            exception_class = InvalidElementStateException<br/>        elif (<br/>            status in ErrorCode.INVALID_SELECTOR<br/>            or status in ErrorCode.INVALID_XPATH_SELECTOR<br/>            or status in ErrorCode.INVALID_XPATH_SELECTOR_RETURN_TYPER<br/>        ):<br/>            exception_class = InvalidSelectorException<br/>        elif status in ErrorCode.ELEMENT_IS_NOT_SELECTABLE:<br/>            exception_class = ElementNotSelectableException<br/>        elif status in ErrorCode.ELEMENT_NOT_INTERACTABLE:<br/>            exception_class = ElementNotInteractableException<br/>        elif status in ErrorCode.INVALID_COOKIE_DOMAIN:<br/>            exception_class = InvalidCookieDomainException<br/>        elif status in ErrorCode.UNABLE_TO_SET_COOKIE:<br/>            exception_class = UnableToSetCookieException<br/>        elif status in ErrorCode.TIMEOUT:<br/>            exception_class = TimeoutException<br/>        elif status in ErrorCode.SCRIPT_TIMEOUT:<br/>            exception_class = TimeoutException<br/>        elif status in ErrorCode.UNKNOWN_ERROR:<br/>            exception_class = WebDriverException<br/>        elif status in ErrorCode.UNEXPECTED_ALERT_OPEN:<br/>            exception_class = UnexpectedAlertPresentException<br/>        elif status in ErrorCode.NO_ALERT_OPEN:<br/>            exception_class = NoAlertPresentException<br/>        elif status in ErrorCode.IME_NOT_AVAILABLE:<br/>            exception_class = ImeNotAvailableException<br/>        elif status in ErrorCode.IME_ENGINE_ACTIVATION_FAILED:<br/>            exception_class = ImeActivationFailedException<br/>        elif status in ErrorCode.MOVE_TARGET_OUT_OF_BOUNDS:<br/>            exception_class = MoveTargetOutOfBoundsException<br/>        elif status in ErrorCode.JAVASCRIPT_ERROR:<br/>            exception_class = JavascriptException<br/>        elif status in ErrorCode.SESSION_NOT_CREATED:<br/>            exception_class = SessionNotCreatedException<br/>        elif status in ErrorCode.INVALID_ARGUMENT:<br/>            exception_class = InvalidArgumentException<br/>        elif status in ErrorCode.NO_SUCH_COOKIE:<br/>            exception_class = NoSuchCookieException<br/>        elif status in ErrorCode.UNABLE_TO_CAPTURE_SCREEN:<br/>            exception_class = ScreenshotException<br/>        elif status in ErrorCode.ELEMENT_CLICK_INTERCEPTED:<br/>            exception_class = ElementClickInterceptedException<br/>        elif status in ErrorCode.INSECURE_CERTIFICATE:<br/>            exception_class = InsecureCertificateException<br/>        elif status in ErrorCode.INVALID_COORDINATES:<br/>            exception_class = InvalidCoordinatesException<br/>        elif status in ErrorCode.INVALID_SESSION_ID:<br/>            exception_class = InvalidSessionIdException<br/>        elif status in ErrorCode.UNKNOWN_METHOD:<br/>            exception_class = UnknownMethodException<br/>        else:<br/>            exception_class = WebDriverException<br/>        if not value:<br/>            value = response[&quot;value&quot;]<br/>        if isinstance(value, str):<br/>            raise exception_class(value)<br/>        if message == &quot;&quot; and &quot;message&quot; in value:<br/>            message = value[&quot;message&quot;]<br/>    <br/>        screen = None  # type: ignore[assignment]<br/>        if &quot;screen&quot; in value:<br/>            screen = value[&quot;screen&quot;]<br/>    <br/>        stacktrace = None<br/>        st_value = value.get(&quot;stackTrace&quot;) or value.get(&quot;stacktrace&quot;)<br/>        if st_value:<br/>            if isinstance(st_value, str):<br/>                stacktrace = st_value.split(&quot;\n&quot;)<br/>            else:<br/>                stacktrace = []<br/>                try:<br/>                    for frame in st_value:<br/>                        line = frame.get(&quot;lineNumber&quot;, &quot;&quot;)<br/>                        file = frame.get(&quot;fileName&quot;, &quot;&lt;anonymous&gt;&quot;)<br/>                        if line:<br/>                            file = f&quot;{file}:{line}&quot;<br/>                        meth = frame.get(&quot;methodName&quot;, &quot;&lt;anonymous&gt;&quot;)<br/>                        if &quot;className&quot; in frame:<br/>                            meth = f&quot;{frame[&#x27;className&#x27;]}.{meth}&quot;<br/>                        msg = &quot;    at %s (%s)&quot;<br/>                        msg = msg % (meth, file)<br/>                        stacktrace.append(msg)<br/>                except TypeError:<br/>                    pass<br/>        if exception_class == UnexpectedAlertPresentException:<br/>            alert_text = None<br/>            if &quot;data&quot; in value:<br/>                alert_text = value[&quot;data&quot;].get(&quot;text&quot;)<br/>            elif &quot;alert&quot; in value:<br/>                alert_text = value[&quot;alert&quot;].get(&quot;text&quot;)<br/>            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here<br/>&gt;       raise exception_class(message, screen, stacktrace)<br/><span class="error">E       selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element &lt;i _ngcontent-ng-c572247695=&quot;&quot; class=&quot;fa fa-search&quot;&gt;&lt;/i&gt; is not clickable at point (1340, 74). Other element would receive the click: &lt;div class=&quot;sidenav-backdrop ng-star-inserted&quot; style=&quot;transition: opacity 0.3s ease-out 0s; position: fixed; width: 100vw; height: 100vh; opacity: 1;&quot;&gt;&lt;/div&gt;</span><br/><span class="error">E         (Session info: chrome=117.0.5938.92)</span><br/><span class="error">E       Stacktrace:</span><br/><span class="error">E       #0 0x55f3047ffc83 &lt;unknown&gt;</span><br/><span class="error">E       #1 0x55f3044ecd27 &lt;unknown&gt;</span><br/><span class="error">E       #2 0x55f30453928d &lt;unknown&gt;</span><br/><span class="error">E       #3 0x55f30453762d &lt;unknown&gt;</span><br/><span class="error">E       #4 0x55f3045353e8 &lt;unknown&gt;</span><br/><span class="error">E       #5 0x55f304534457 &lt;unknown&gt;</span><br/><span class="error">E       #6 0x55f3045291f9 &lt;unknown&gt;</span><br/><span class="error">E       #7 0x55f3045548a2 &lt;unknown&gt;</span><br/><span class="error">E       #8 0x55f304528c08 &lt;unknown&gt;</span><br/><span class="error">E       #9 0x55f304554a6e &lt;unknown&gt;</span><br/><span class="error">E       #10 0x55f30456d98c &lt;unknown&gt;</span><br/><span class="error">E       #11 0x55f304554673 &lt;unknown&gt;</span><br/><span class="error">E       #12 0x55f304527642 &lt;unknown&gt;</span><br/><span class="error">E       #13 0x55f30452842e &lt;unknown&gt;</span><br/><span class="error">E       #14 0x55f3047c8d0d &lt;unknown&gt;</span><br/><span class="error">E       #15 0x55f3047cce14 &lt;unknown&gt;</span><br/><span class="error">E       #16 0x55f3047d60d8 &lt;unknown&gt;</span><br/><span class="error">E       #17 0x55f3047cd630 &lt;unknown&gt;</span><br/><span class="error">E       #18 0x55f30479d77e &lt;unknown&gt;</span><br/><span class="error">E       #19 0x55f3047ee878 &lt;unknown&gt;</span><br/><span class="error">E       #20 0x55f3047eea74 &lt;unknown&gt;</span><br/><span class="error">E       #21 0x55f3047feda8 &lt;unknown&gt;</span><br/><span class="error">E       #22 0x7f14da054b43 &lt;unknown&gt;</span><br/><br/>../../venu/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py:245: ElementClickInterceptedException<br/> -------------------------------Captured log call-------------------------------- <br/>19:40:27 - INFO - Assign new sample2 into search input<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td>1</td>
-          <td class="col-time">2023-08-08 19:52:47</td>
+          <td class="col-time">2023-09-25 19:40:52</td>
           <td>Test_AllCrud</td>
           <td>test_01_test_login_1___test_gmail_com_____Welcome_Tech2022__</td>
           <td class="col-result">Passed</td>
-          <td class="col-time">19.23s</td>
+          <td class="col-time">15.35s</td>
           <td><a href="https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab" target="_blank">URL</a></td>
           <td>Chrome</td>
-          <td>115.0.5790.110</td>
-          <td>1050 * 702</td></tr>
+          <td>117.0.5938.92</td>
+          <td>1050 * 731</td></tr>
         <tr>
           <td class="extra" colspan="10">
-            <div><div><img src="screenshots/Test_AllCrud/2023-08-08 19:50:29.png" alt="screenshot" style="width:300px;height:200px" onclick="window.open(this.src)" align="right"/></div></div>
+            <div><div><img src="screenshots/Test_AllCrud/2023-09-25 19:39:25.png" alt="screenshot" style="width:300px;height:200px" onclick="window.open(this.src)" align="right"/></div></div>
             <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Login Failed
 
 Invalid username or password
-<br/> -------------------------------Captured log call-------------------------------- <br/>19:50:19 - INFO - Assign test@gmail.com into username
-19:50:20 - INFO - Assign *Welcome&amp;Tech2022 into password
-19:50:20 - INFO - Click on login button
-19:50:27 - INFO - Login Failed<br/></div></td></tr></tbody>
+<br/> -------------------------------Captured log call-------------------------------- <br/>19:39:15 - INFO - Assign test@gmail.com into username
+19:39:16 - INFO - Assign *Welcome&amp;Tech2022 into password
+19:39:16 - INFO - Click on login button
+19:39:23 - INFO - Login Failed<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td>2</td>
-          <td class="col-time">2023-08-08 19:52:47</td>
+          <td class="col-time">2023-09-25 19:40:52</td>
           <td>Test_AllCrud</td>
           <td>test_01_test_login_2___robyn_hills_sematree_com_____Welcome_Tech2021__</td>
+          <td class="col-result">Passed</td>
+          <td class="col-time">7.88s</td>
+          <td><a href="https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab" target="_blank">URL</a></td>
+          <td>Chrome</td>
+          <td>117.0.5938.92</td>
+          <td>1050 * 731</td></tr>
+        <tr>
+          <td class="extra" colspan="10">
+            <div><div><img src="screenshots/Test_AllCrud/2023-09-25 19:39:37.png" alt="screenshot" style="width:300px;height:200px" onclick="window.open(this.src)" align="right"/></div></div>
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Login Failed
+
+Invalid username or password
+<br/> -------------------------------Captured log call-------------------------------- <br/>19:39:28 - INFO - Assign robyn.hills@sematree.com into username
+19:39:28 - INFO - Assign *Welcome&amp;Tech2021 into password
+19:39:28 - INFO - Click on login button
+19:39:35 - INFO - Login Failed<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td>3</td>
+          <td class="col-time">2023-09-25 19:40:52</td>
+          <td>Test_AllCrud</td>
+          <td>test_01_test_login_3___test_gmail_com_____Welcome_Tech2021__</td>
           <td class="col-result">Passed</td>
           <td class="col-time">7.81s</td>
           <td><a href="https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab" target="_blank">URL</a></td>
           <td>Chrome</td>
-          <td>115.0.5790.110</td>
-          <td>1050 * 702</td></tr>
+          <td>117.0.5938.92</td>
+          <td>1050 * 731</td></tr>
         <tr>
           <td class="extra" colspan="10">
-            <div><div><img src="screenshots/Test_AllCrud/2023-08-08 19:50:41.png" alt="screenshot" style="width:300px;height:200px" onclick="window.open(this.src)" align="right"/></div></div>
+            <div><div><img src="screenshots/Test_AllCrud/2023-09-25 19:39:49.png" alt="screenshot" style="width:300px;height:200px" onclick="window.open(this.src)" align="right"/></div></div>
             <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Login Failed
 
 Invalid username or password
-<br/> -------------------------------Captured log call-------------------------------- <br/>19:50:32 - INFO - Assign robyn.hills@sematree.com into username
-19:50:32 - INFO - Assign *Welcome&amp;Tech2021 into password
-19:50:32 - INFO - Click on login button
-19:50:39 - INFO - Login Failed<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td>3</td>
-          <td class="col-time">2023-08-08 19:52:47</td>
-          <td>Test_AllCrud</td>
-          <td>test_01_test_login_3___test_gmail_com_____Welcome_Tech2021__</td>
-          <td class="col-result">Passed</td>
-          <td class="col-time">7.77s</td>
-          <td><a href="https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab" target="_blank">URL</a></td>
-          <td>Chrome</td>
-          <td>115.0.5790.110</td>
-          <td>1050 * 702</td></tr>
-        <tr>
-          <td class="extra" colspan="10">
-            <div><div><img src="screenshots/Test_AllCrud/2023-08-08 19:50:53.png" alt="screenshot" style="width:300px;height:200px" onclick="window.open(this.src)" align="right"/></div></div>
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Login Failed
-
-Invalid username or password
-<br/> -------------------------------Captured log call-------------------------------- <br/>19:50:44 - INFO - Assign test@gmail.com into username
-19:50:44 - INFO - Assign *Welcome&amp;Tech2021 into password
-19:50:44 - INFO - Click on login button
-19:50:51 - INFO - Login Failed<br/></div></td></tr></tbody>
+<br/> -------------------------------Captured log call-------------------------------- <br/>19:39:40 - INFO - Assign test@gmail.com into username
+19:39:40 - INFO - Assign *Welcome&amp;Tech2021 into password
+19:39:40 - INFO - Click on login button
+19:39:47 - INFO - Login Failed<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td>4</td>
-          <td class="col-time">2023-08-08 19:52:47</td>
+          <td class="col-time">2023-09-25 19:40:52</td>
           <td>Test_AllCrud</td>
           <td>test_01_test_login_4___robyn_hills_sematree_com_____Welcome_Tech2022__</td>
           <td class="col-result">Passed</td>
-          <td class="col-time">8.75s</td>
+          <td class="col-time">9.40s</td>
           <td><a href="https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab" target="_blank">URL</a></td>
           <td>Chrome</td>
-          <td>115.0.5790.110</td>
-          <td>1050 * 702</td></tr>
+          <td>117.0.5938.92</td>
+          <td>1050 * 731</td></tr>
         <tr>
           <td class="extra" colspan="10">
-            <div><div><img src="screenshots/Test_AllCrud/2023-08-08 19:51:06.png" alt="screenshot" style="width:300px;height:200px" onclick="window.open(this.src)" align="right"/></div></div>
+            <div><div><img src="screenshots/Test_AllCrud/2023-09-25 19:40:03.png" alt="screenshot" style="width:300px;height:200px" onclick="window.open(this.src)" align="right"/></div></div>
             <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Login Passed
 
 Title == TruTesta ™ Sample Tracker 2.0
-<br/> -------------------------------Captured log call-------------------------------- <br/>19:50:56 - INFO - Assign robyn.hills@sematree.com into username
-19:50:56 - INFO - Assign *Welcome&amp;Tech2022 into password
-19:50:57 - INFO - Click on login button
-19:51:04 - INFO - Login Passed<br/></div></td></tr></tbody>
+<br/> -------------------------------Captured log call-------------------------------- <br/>19:39:52 - INFO - Assign robyn.hills@sematree.com into username
+19:39:52 - INFO - Assign *Welcome&amp;Tech2022 into password
+19:39:54 - INFO - Click on login button
+19:40:01 - INFO - Login Passed<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td>5</td>
-          <td class="col-time">2023-08-08 19:52:47</td>
+          <td class="col-time">2023-09-25 19:40:52</td>
           <td>Test_AllCrud</td>
           <td>test_02_navigate</td>
           <td class="col-result">Passed</td>
-          <td class="col-time">12.83s</td>
+          <td class="col-time">12.47s</td>
           <td><a href="https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab" target="_blank">URL</a></td>
           <td>Chrome</td>
-          <td>115.0.5790.110</td>
-          <td>1050 * 702</td></tr>
+          <td>117.0.5938.92</td>
+          <td>1050 * 731</td></tr>
         <tr>
           <td class="extra" colspan="10">
-            <div><div><img src="screenshots/Test_AllCrud/2023-08-08 19:51:23.png" alt="screenshot" style="width:300px;height:200px" onclick="window.open(this.src)" align="right"/></div></div>
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>19:51:09 - INFO - Click on menubar
-19:51:12 - INFO - Click on side_nav
-19:51:15 - INFO - Click on administration
-19:51:18 - INFO - Click on category<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td>6</td>
-          <td class="col-time">2023-08-08 19:52:47</td>
-          <td>Test_AllCrud</td>
-          <td>test_03_add</td>
-          <td class="col-result">Passed</td>
-          <td class="col-time">11.88s</td>
-          <td><a href="https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab" target="_blank">URL</a></td>
-          <td>Chrome</td>
-          <td>115.0.5790.110</td>
-          <td>1050 * 702</td></tr>
-        <tr>
-          <td class="extra" colspan="10">
-            <div><div><img src="screenshots/Test_AllCrud/2023-08-08 19:51:39.png" alt="screenshot" style="width:300px;height:200px" onclick="window.open(this.src)" align="right"/></div></div>
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>19:51:26 - INFO - Click on add button
-19:51:29 - INFO - Assign new sample2 into name
-19:51:29 - INFO - Assign added for testing into description
-19:51:29 - INFO - Assign 8838yo203 into bussiness code
-19:51:32 - INFO - Click on submit button
-19:51:37 - INFO - testcase add passed<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td>7</td>
-          <td class="col-time">2023-08-08 19:52:47</td>
-          <td>Test_AllCrud</td>
-          <td>test_04_search</td>
-          <td class="col-result">Passed</td>
-          <td class="col-time">8.40s</td>
-          <td><a href="https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab" target="_blank">URL</a></td>
-          <td>Chrome</td>
-          <td>115.0.5790.110</td>
-          <td>1050 * 702</td></tr>
-        <tr>
-          <td class="extra" colspan="10">
-            <div><div><img src="screenshots/Test_AllCrud/2023-08-08 19:51:52.png" alt="screenshot" style="width:300px;height:200px" onclick="window.open(this.src)" align="right"/></div></div>
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>19:51:42 - INFO - Assign new sample2 into search input
-19:51:47 - INFO - Click on search button<br/></div></td></tr></tbody>
+            <div><div><img src="screenshots/Test_AllCrud/2023-09-25 19:40:20.png" alt="screenshot" style="width:300px;height:200px" onclick="window.open(this.src)" align="right"/></div></div>
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>19:40:05 - INFO - Click on menubar
+19:40:08 - INFO - Click on side_nav<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td>8</td>
-          <td class="col-time">2023-08-08 19:52:47</td>
+          <td class="col-time">2023-09-25 19:40:52</td>
           <td>Test_AllCrud</td>
           <td>test_05_modify</td>
           <td class="col-result">Passed</td>
-          <td class="col-time">11.90s</td>
+          <td class="col-time">0.00s</td>
           <td><a href="https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab" target="_blank">URL</a></td>
           <td>Chrome</td>
-          <td>115.0.5790.110</td>
-          <td>1050 * 702</td></tr>
+          <td>117.0.5938.92</td>
+          <td>1050 * 731</td></tr>
         <tr>
           <td class="extra" colspan="10">
-            <div><div><img src="screenshots/Test_AllCrud/2023-08-08 19:52:08.png" alt="screenshot" style="width:300px;height:200px" onclick="window.open(this.src)" align="right"/></div></div>
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>19:51:54 - INFO - Click on modify
-19:51:59 - INFO - Assign sampleTracker_modify into name
-19:51:59 - INFO - Assign Modified data into description
-19:52:00 - INFO - Assign 810Ybecse into bussiness code
-19:52:03 - INFO - Click on save button
-19:52:06 - INFO - testcase modify passed<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td>9</td>
-          <td class="col-time">2023-08-08 19:52:47</td>
-          <td>Test_AllCrud</td>
-          <td>test_06_delete</td>
-          <td class="col-result">Passed</td>
-          <td class="col-time">8.33s</td>
-          <td><a href="https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab" target="_blank">URL</a></td>
-          <td>Chrome</td>
-          <td>115.0.5790.110</td>
-          <td>1050 * 702</td></tr>
-        <tr>
-          <td class="extra" colspan="10">
-            <div><div><img src="screenshots/Test_AllCrud/2023-08-08 19:52:20.png" alt="screenshot" style="width:300px;height:200px" onclick="window.open(this.src)" align="right"/></div></div>
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>19:52:10 - INFO - Click on delete button
-19:52:13 - INFO - Click on confirm button
-19:52:18 - INFO - testcase delete passed<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td>10</td>
-          <td class="col-time">2023-08-08 19:52:47</td>
-          <td>Test_AllCrud</td>
-          <td>test_7_search</td>
-          <td class="col-result">Passed</td>
-          <td class="col-time">20.66s</td>
-          <td><a href="https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab" target="_blank">URL</a></td>
-          <td>Chrome</td>
-          <td>115.0.5790.110</td>
-          <td>1050 * 702</td></tr>
-        <tr>
-          <td class="extra" colspan="10">
-            <div><div><img src="screenshots/Test_AllCrud/2023-08-08 19:52:45.png" alt="screenshot" style="width:300px;height:200px" onclick="window.open(this.src)" align="right"/></div></div>
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Total Items Found: 0
-
- Total Pages: 0
-<br/> -------------------------------Captured log call-------------------------------- <br/>19:52:25 - INFO - Click on search button
-19:52:33 - INFO - Click on 50 per Page
-19:52:38 - INFO - Total Items Found: 0
-19:52:38 - INFO - Total Pages: 0<br/></div></td></tr></tbody></table></body></html>
+            <div class="empty log">No log output captured.</div></td></tr></tbody></table></body></html>

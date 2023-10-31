@@ -3,23 +3,21 @@ import time
 from datetime import datetime
 
 import pytest
-from py.xml import html
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from platform import python_version
 
+from py.xml import html
 from pages.login_page import LoginPage
 
-serv_obj = Service("/home/cb/Downloads/webdrivers/chromedriver")
+serv_obj = Service("/usr/bin/chromedriver")
 driver = webdriver.Chrome(service=serv_obj)
 
 
 @pytest.fixture(scope="class")
 def setup(request):
     global driver
-    driver.get(
-        "https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details"
-        "-tab")
+    driver.get("https://intertek-dev.trutesta.io/trusamples.mdb5")
     driver.maximize_window()
     # wait = WebDriverWait(driver,10)
     time.sleep(5)
@@ -166,7 +164,8 @@ def my_multiple_columns(item, report):
     yield "Screen_Size", size
     yield "Platform_name", capabilities.get('platformName')
     yield "Python_Version", python_version()
-    yield "Url", "https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db/sample-details-tab"
+    yield "Url", ("https://intertek-dev.trutesta.io/trusamples.mdb5/samples/cf5c0b49-6f07-4a93-b379-dba01ccde2db"
+                  "/sample-details-tab")
 
 
 def pytest_csv_register_columns(columns):
@@ -179,3 +178,15 @@ def pytest_csv_register_columns(columns):
     columns['duration'] = lambda item, report: {'Duration': '{:.2f}s'.format(report.duration)}
 
     columns['my_multiple_columns'] = my_multiple_columns
+
+
+
+
+
+
+
+
+
+
+
+
